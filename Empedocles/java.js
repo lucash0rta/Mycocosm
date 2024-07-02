@@ -64,3 +64,6 @@ particlesJS("particles-js", {
 
 
         }});
+
+        var iframe = document.getElementById('vimeoVideo');
+        player.setVolume(0);
