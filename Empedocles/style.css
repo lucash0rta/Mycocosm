@@ -1,0 +1,96 @@
+#mtAetna {
+    width: 110%;
+    position: fixed;
+    bottom: 0;
+    left: -5%;
+    min-width: 1000px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+#backgroundGif1 {
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    background: 
+        url('https://s12.gifyu.com/images/SrA0p.gif') repeat,
+        url('https://s10.gifyu.com/images/SrA0K.gif') repeat,
+        url('https://s10.gifyu.com/images/SrA0c.gif') repeat;
+    background-size: 300px auto; /* Set max-width for each GIF */
+}
+
+.gify {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.floatingBox {
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    top: 50px; /* Adjust top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.boxContent {
+    position: relative;
+    padding: 10px;
+}
+
+.info {
+    font-size: 10px;
+    color: #ccc;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+.activateButton {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.closeButton {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 500px;
+}
+
+/* Handle for dragging */
+.floatingBox .boxContent {
+    cursor: move;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+}
