@@ -94,3 +94,89 @@ function animatePath(path) {
 paths.forEach(function(path) {
     animatePath(path);
 });
+
+
+
+/* Function for the BUTTERFLY */
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('butterflyCanvas');
+    const context = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = 700;
+
+    const butterflySprite = new Image();
+    butterflySprite.src = 'bwSprite.png';
+    const spriteWidth = 64;
+    const spriteHeight = 64;
+    const totalFrames = 6;
+
+    class Butterfly {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.speed = 2 + Math.random() * 2;
+            this.direction = Math.random() * Math.PI * 2;
+            this.currentFrame = Math.floor(Math.random() * totalFrames);
+            this.frameCounter = 0;
+        }
+
+        update() {
+            // Update position
+            this.x += Math.cos(this.direction) * this.speed;
+            this.y += Math.sin(this.direction) * this.speed;
+
+            // Bounce off edges
+            if (this.x < 0 || this.x > canvas.width - spriteWidth) {
+                this.direction = Math.PI - this.direction;
+            }
+            if (this.y < 0 || this.y > canvas.height - spriteHeight) {
+                this.direction = -this.direction;
+            }
+
+            // Randomly change direction occasionally
+            if (Math.random() < 0.02) {
+                this.direction += (Math.random() - 0.5) * Math.PI / 2;
+            }
+
+            // Update animation frame
+            this.frameCounter++;
+            if (this.frameCounter >= 5) { // Change frame every 5 updates
+                this.currentFrame = (this.currentFrame + 1) % totalFrames;
+                this.frameCounter = 0;
+            }
+        }
+
+        draw() {
+            const frameX = this.currentFrame * spriteWidth;
+            context.drawImage(
+                butterflySprite,
+                frameX, 0,
+                spriteWidth, spriteHeight,
+                this.x, this.y,
+                spriteWidth, spriteHeight
+            );
+        }
+    }
+
+    const butterflies = Array(5).fill().map(() => new Butterfly());
+
+    function animate() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        butterflies.forEach(butterfly => {
+            butterfly.update();
+            butterfly.draw();
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    butterflySprite.onload = function() {
+        animate();
+    };
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = 700;
+    });
+});
