@@ -1,18 +1,20 @@
 body {
     image-rendering: pixelated;
+    font-family: 'Press Start 2P', cursive;
+    overflow-x: hidden;
 }
 
 .gardenBackdrop {
     width: 800px;
     display: inline;
-    margin: -5px;
+    margin: -10px;
     padding: 0;
 }
 
 .behindTopSection {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -5px;
     width: 170%;
     height: 700px;
     z-index: -1;
@@ -34,7 +36,7 @@ body {
 .undergrowthBackdrop {
     width: 800px;
     display: inline;
-    margin: -5px;
+    margin: -10px;
     padding: 0;
 }
 
@@ -54,29 +56,31 @@ body {
 /* Individual Items For the garden  */
 
 #bush {
-    grid-column: 1 / 3;
-    grid-row: 7 / 8;
+    grid-column:4 / 2;
+    grid-row: 1 / 7;
+    transform: translateY(30px);
 }
 #bush2 {
     grid-column: 5 / 9;
     grid-row: 7 / 8;
+    transform: translateY(10px);
 }
 
 #magpie {
-    grid-column: 3 / 5;
-    grid-row: 7 / 8;
+    grid-column: 1 / 2;
+    grid-row: 1 / 7;
     transform: translateY(30px);
 }
 
 #shroom {
-    grid-column: 5 / 7;
-    grid-row: 7 / 8;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 
 #tree128px {
-    grid-column: 7 / 9;
-    grid-row: 7 / 8;
-    width: 265px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+ /*    width: 100px; */
     transform: translateY(-9px);
 }
 
@@ -85,45 +89,61 @@ body {
 }
 
 /* Floating Box Styles */
-
+/* Floating Box Styles */
 .floatingBox {
     display: none;
-    position: absolute;
-    align-items: center;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Move the element back to the center */
     z-index: 1000;
-    width: 70%;
-    height: 60%;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    padding: 20px;
-    border-radius: 10px;
-    overflow: scroll;
-}
-
-.FloatingBoxHeader {
-    background-color: #f1f1f1;
-    padding: 10px;
-    cursor: move; /* Indicates the element is draggable */
+    width: 800px;
+    background-color: rgb(224, 224, 224);
+    border: 4px solid #747474;
     text-align: center;
-    transform: translateX(-20px) translateY(-20px);
-    width: 100%;
 }
 
-.closeBtn {
-    float: right;
-    cursor: pointer;
-    background: #000000;
-    border: none;
-    padding: 5px;
-    color: rgb(255, 190, 190);
-    border-radius: 500px;
+/* Floating Box Header Styles */
+.FloatingBoxHeader {
+    position: relative;
+    width: 100%;
+    height: 40px; /* Adjust height to fit the top bar image */
+    background-color: #D7D7D7;
+    cursor: move; /* Indicates the element is draggable */
 }
+
+/* Top Bar Image */
+.topBarImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with the image */
+}
+
+/* Close Button Styles */
+.closeBtn {
+    position: absolute;
+    top: 2px; /* Adjust to position on the top bar */
+    right: 2px; /* Adjust to position on the top bar */
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer;
+    padding: 0; /* No padding */
+}
+
+/* Close Icon Styles */
+.closeIcon {
+    height: 32px; /* Height of the close icon */
+}
+
+
 
 /* SVG Style  */
 .path {
     fill: none;
-    stroke: #e9c5ac9e;
+    stroke: #ffffff;
     stroke-miterlimit: 10;
     stroke-width: 1px;
   }
@@ -170,12 +190,88 @@ body {
 
 /* Particles System  */
 
-#particles-js {
+.canvas-container {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    z-index: 100;
+}
+
+#butterflyCanvas {
+    width: 100%;
+    height: 700px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 700px;
-    z-index: 999; /* Ensure it's on top of other elements */
-    pointer-events: none; /* So it doesn't interfere with other elements */
+    z-index: 100;
+    pointer-events: none;
+    
+}
+
+
+
+/* Mobile Setup */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust font size for better readability on mobile */
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .undergrowthBackdrop {
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gardenBackdrop {
+        width: 100%;
+        height: 700px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .behindBottomSection {
+        height: 1700px;
+        overflow: hidden; /* Adjust height for smaller screens */}
+    
+
+    .behindTopSection, {
+        width: 100%; 
+        height: 300px;
+        overflow: hidden;
+        /* Allow height to adjust naturally */
+        left: 0;
+    }
+
+
+    .floatingBox {
+        width: 300px;
+        height: auto; /* Allow height to adjust naturally */
+        top: 20%;
+    }
+
+    .FloatingBoxHeader {
+        height: 30px;
+    }
+
+    .closeIcon {
+        height: 24px; /* Smaller close icon */
+    }
+
+    .topBar {
+        height: 24px; /* Adjust top bar height */
+    }
+
+    .topmenuItem {
+        height: 24px; /* Match top bar height */
+    }
+
+    .canvas-container, #butterflyCanvas {
+        width: 100%; /* Adjust height for smaller screens */
+    }
 }
