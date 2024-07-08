@@ -26,7 +26,7 @@ body {
     top: 700px;
     left: -10px;
     width: 170%;
-    height: 2450px;
+    height: 2400px;
     z-index: -1;
     overflow: hidden;
 }
@@ -216,11 +216,11 @@ body {
 @media (max-width: 600px) {
     body {
         font-size: 14px; /* Adjust font size for better readability on mobile */
-        overflow-y: hidden;
-        width: 100%;
+        overflow-x: hidden; /* Hide horizontal overflow */
     }
 
-    .undergrowthBackdrop {
+    .undergrowthBackdrop,
+    .gardenBackdrop {
         width: 100%;
         overflow: hidden;
         margin: 0;
@@ -228,35 +228,26 @@ body {
     }
 
     .gardenBackdrop {
-        width: 100%;
-        height: 700px;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+        height: 700px; /* Set a fixed height if necessary */
     }
 
-    .behindBottomSection {
-        height: 1700px;
-        overflow: hidden; /* Adjust height for smaller screens */}
-    
 
-    .behindTopSection, {
-        width: 100%; 
-        height: 300px;
+    .behindTopSection {
+        width: 100%;
+        height: 700px; /* Set a fixed height if necessary */
         overflow: hidden;
-        /* Allow height to adjust naturally */
         left: 0;
     }
 
-
     .floatingBox {
-        width: 300px;
-        height: auto; /* Allow height to adjust naturally */
-        top: 20%;
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Limit width if needed */
+        height: auto; /* Allow height to adjust */
+        top: 30%;
     }
 
     .FloatingBoxHeader {
-        height: 30px;
+        height: 30px; /* Adjust header height if necessary */
     }
 
     .closeIcon {
@@ -272,6 +263,35 @@ body {
     }
 
     .canvas-container, #butterflyCanvas {
-        width: 100%; /* Adjust height for smaller screens */
+        width: 100%; /* Full width for canvas */
+        height: auto; /* Allow height to adjust */
     }
 }
+
+
+.absoluteBoxBottomDirt {
+    position: absolute;
+    color: white;
+    top: 1000px;
+    left: 50%; /* Position at 50% of the parent container */
+    transform: translateX(-50%); /* Translate back by half of its own width */
+    width: 70%;
+    max-width: 1000px; /* Adjust max-width as needed */
+    height: auto;
+    padding: 20px;
+    background-color: #00000054;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+a {
+    color: white;
+  }
+
+.svgHolderDiv {
+    justify-content: center;
+    align-items: center;
+    height: 2400px;
+    overflow: hidden;
+  }
