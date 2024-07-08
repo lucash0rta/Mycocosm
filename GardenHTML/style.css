@@ -1,5 +1,6 @@
 body {
     image-rendering: pixelated;
+    max-width: 100%;
     font-family: 'Press Start 2P', cursive;
     overflow-x: hidden;
 }
