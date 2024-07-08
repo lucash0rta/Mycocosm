@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.speed = 2 + Math.random() * 2;
+            this.speed = 0.2 + Math.random() * 1;
             this.direction = Math.random() * Math.PI * 2;
             this.currentFrame = Math.floor(Math.random() * totalFrames);
             this.frameCounter = 0;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Update animation frame
             this.frameCounter++;
-            if (this.frameCounter >= 5) { // Change frame every 5 updates
+            if (this.frameCounter >= 40) { // Change frame every 5 updates
                 this.currentFrame = (this.currentFrame + 1) % totalFrames;
                 this.frameCounter = 0;
             }
