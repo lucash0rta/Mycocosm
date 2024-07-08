@@ -219,6 +219,11 @@ body {
         overflow-x: hidden; /* Hide horizontal overflow */
     }
 
+    .mobileCutoffGrid {
+        width: 100%; /* Full width on smaller screens */
+        overflow: hidden;
+    }
+
     .undergrowthBackdrop,
     .gardenBackdrop {
         width: 100%;
@@ -243,7 +248,7 @@ body {
         width: 100%; /* Full width on smaller screens */
         max-width: 300px; /* Limit width if needed */
         height: auto; /* Allow height to adjust */
-        top: 30%;
+        top: 50%;
     }
 
     .FloatingBoxHeader {
