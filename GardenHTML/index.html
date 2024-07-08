@@ -3,7 +3,6 @@
 <head>
     <title>My Simple Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="topBar">
@@ -15,69 +14,51 @@
     </div>
 
     </div>
-    <canvas id="butterflyCanvas"></canvas>
-
+    <div id="particles-js">  </div>
     <div id="FirstSection">
         
 
         <!-- Div for animals and trees -->
 
     <div class="birdsAndBees">
-            <img src="myco.png" alt="" id="bush" class="sixty4pximages">
+            <img src="littleBush64.png" alt="" id="bush" class="sixty4pximages">
             <img src="littleBush64.png" alt="" id="bush2" class="sixty4pximages">
-            <img src="bUTTERFLYicON.png" alt="" id="magpie" class="sixty4pximages">
-            <img src="MYCELLIUMicON.png" alt="" id="shroom" class="sixty4pximages">
-            <img src="TREEicON.png" alt="" id="tree128px" class="sixty4pximages">
-            <h1></h1>
+            <img src="magpie.png" alt="" id="magpie" class="sixty4pximages">
+            <img src="mushroom-Animated.gif" alt="" id="shroom" class="sixty4pximages">
+            <img src="tree128px.png" alt="" id="tree128px" class="sixty4pximages">
+            <h1>Hello Welcome to My Simple Website</h1>
     </div>
 
     <!-- Floating boxes (popups) -->
 
     <div id="floatingBoxBush" class="floatingBox">
-        <div class="FloatingBoxHeader">
-            <img src="MiddletOfTopBAr.png" alt="Top Bar" class="topBarImage">
-            <button class="closeBtn"><img src="close.png" alt="Close" class="closeIcon"></button>
-        </div>
-        
-        <iframe width="100%" height="615" src="https://www.youtube.com/embed/R_zF6jJUwpQ?si=Z7cFHGg1aFiREax6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>What could we learn from a phyto centered view point?</p>
+        <div class="FloatingBoxHeader">Bush <button class="closeBtn">Close</button></div>
+        <p>Information about Bush.</p>
     </div>
     <div id="floatingBoxBush2" class="floatingBox">
         <div class="FloatingBoxHeader">Bush 2 <button class="closeBtn">Close</button></div>
         <p>Information about Bush 2.</p>
         
     </div>
-
-
-
-<!-- Floating Box Shroom  -->
-
-<div id="floatingBoxShroom" class="floatingBox">
-    <div class="FloatingBoxHeader">
-        <img src="MiddletOfTopBAr.png" alt="Top Bar" class="topBarImage">
-        <button class="closeBtn"><img src="close.png" alt="Close" class="closeIcon"></button>
+    <div id="floatingBoxMagpie" class="floatingBox">
+        <div class="FloatingBoxHeader">Magpie <button class="closeBtn">Close</button></div>
+        <p>Information about Magpie.</p>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2Fo03b072dHoM4w5bKZa3moz%2FMyco-Mind%3Fnode-id%3D0-1%26t%3Dp24qn4tiX0aZaMb0-1" allowfullscreen></iframe>
     </div>
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/978935061?h=381334328b" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-<p>Beneath the earth, it sprawls,<br>
-Sensing, adapting where nature calls. <br>
-In forests deep, a web of trees, <br>
-Exchanging life through silent appeals.</p>
-</div>
-
-
-
-<!-- Floating Box Tree -->
-
-<div id="floatingBoxTree" class="floatingBox">
-    <div class="FloatingBoxHeader">
-        <img src="MiddletOfTopBAr.png" alt="Top Bar" class="topBarImage">
-        <button class="closeBtn"><img src="close.png" alt="Close" class="closeIcon"></button>
+    <div id="floatingBoxShroom" class="floatingBox">
+        <div class="FloatingBoxHeader">Mushroom <button class="closeBtn">Close</button></div>
+        <p>Information about Mushroom.</p>
     </div>
-    <img src="TreeDanceAseprite.gif" alt="" id="treeDance">
-    <div id="gifPoem">
-    <p>
-        Falling in love in a moment, 
-        <br>
+
+
+    <div id="floatingBoxTree" class="floatingBox">
+        <div class="FloatingBoxHeader">Tree <button class="closeBtn">Close</button></div>
+
+        <img src="TreeDanceAseprite.gif" alt="" id="treeDance">
+        <div id="gifPoem">
+        <p>
+            Falling in love in a moment, 
+            <br>
 The breeze drew me here, 
 <br>
 I have been born and uprooted, 
@@ -89,34 +70,21 @@ Peeling away, Stepping back
 The sun is warm today,
 </div>
 
-    </p>
-</div>
-</div>
-
-
-
-
-    <!--  magpie popup --- BUTTERFLY -->
-    <div id="floatingBoxMagpie" class="floatingBox">
-        <div class="FloatingBoxHeader">
-            <img src="MiddletOfTopBAr.png" alt="Top Bar" class="topBarImage">
-            <button class="closeBtn"><img src="close.png" alt="Close" class="closeIcon"></button>
-        </div>
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/978941339?h=4484b9fb6a&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-        <br>
-        Everything within my happiness, exists in every butterfly.  Illuminates. Pitch. Black. Darkness. If I touch. Will I lose them
-       
-       </p>
+        </p>
     </div>
+</div>
+
 
 
 
     <!-- Div For the garden backdrop / screensaver -->
         <div class="behindTopSection">
-             <img src="backdrop003.png" alt="" class="gardenBackdrop">
-             <img src="backdrop003.png" alt="" class="gardenBackdrop">
-             <img src="backdrop003.png" alt="" class="gardenBackdrop">
-             <img src="backdrop003.png" alt="" class="gardenBackdrop">
+             <img src="Untitled-1-export.png" alt="" class="gardenBackdrop">
+             <img src="Untitled-1-export.png" alt="" class="gardenBackdrop">
+             <img src="Untitled-1-export.png" alt="" class="gardenBackdrop">
+             <img src="Untitled-1-export.png" alt="" class="gardenBackdrop">
+             <img src="Untitled-1-export.png" alt="" class="gardenBackdrop">
+             <img src="Untitled-1-export.png" alt="" class="gardenBackdrop">
         </div>
     </div>
 
@@ -144,10 +112,12 @@ The sun is warm today,
 
         <!-- Div For the backdrop of the bottom section -->
         <div class="behindBottomSection">
-        <img src="BWbase240x750-export.png" alt="" class="undergrowthBackdrop">
-        <img src="BWbase240x750-export.png" alt="" class="undergrowthBackdrop">
-        <img src="BWbase240x750-export.png" alt="" class="undergrowthBackdrop">
-        <img src="BWbase240x750-export.png" alt="" class="undergrowthBackdrop">
+        <img src="lowQualScroll_Dirt.png" alt="" class="undergrowthBackdrop">
+        <img src="lowQualScroll_Dirt.png" alt="" class="undergrowthBackdrop">
+        <img src="lowQualScroll_Dirt.png" alt="" class="undergrowthBackdrop">
+        <img src="lowQualScroll_Dirt.png" alt="" class="undergrowthBackdrop">
+        <img src="lowQualScroll_Dirt.png" alt="" class="undergrowthBackdrop">
+        <img src="lowQualScroll_Dirt.png" alt="" class="undergrowthBackdrop">
         </div>
 
     </div>
