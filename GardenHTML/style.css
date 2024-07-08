@@ -5,6 +5,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 .gardenBackdrop {
     width: 800px;
     display: inline;
@@ -301,3 +303,7 @@ a {
     height: 2400px;
     overflow: hidden;
   }
+
+  .imagesLucas { 
+    display: inline;
+}
