@@ -89,7 +89,7 @@ document.addEventListener('touchend', (evt) => evt.preventDefault(), { passive: 
 
 
 function loadImages() {
-    playerImage.src = 'obj.png';  // Replace with your player image path
+    playerImage.src = 'Tree.png';  // Replace with your player image path
     objects.forEach(obj => {
         obj.image = new Image();
         obj.image.src = `${obj.id}-image.png`;  // Replace with your object image paths
