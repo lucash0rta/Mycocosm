@@ -137,3 +137,8 @@ body {
     width: 300px;
     margin: auto;
   }
+
+  .rotate-90 {
+    transform: rotate(-90deg);
+    width: 120px;
+}
