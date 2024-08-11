@@ -1,0 +1,48 @@
+body {
+    font-family: "Courier New", monospace;
+    background-color: #6e6e6e;
+    color: #fff;
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+h1, h2, h3 {
+    color: #ccc;
+}
+
+.ascii-art {
+    font-size: 12px;
+    white-space: pre;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.retro-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23333' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    padding: 20px;
+    border: 2px solid #fff;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px dotted #fff;
+}
+
+a:hover {
+    border-bottom: 1px solid #fff;
+}
