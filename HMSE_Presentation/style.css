@@ -1,0 +1,63 @@
+/* Reset default styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color and font styles */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the slide */
+.slide {
+    width: 800px;
+    height: 600px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Style the slide content */
+.slide-content {
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* Style slide headings */
+.slide h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style slide lists */
+.slide ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.slide ul li {
+    margin-bottom: 10px;
+}
+
+/* Style slide links */
+.slide a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+.slide a:hover {
+    text-decoration: underline;
+}
