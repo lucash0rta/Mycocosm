@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000000c8;
+    color: #fff;
+}
+
+.slide {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-wrapper {
+    width: 50%;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.5vw;
+    position: relative;
+}
+
+li {
+    margin-bottom: 1vh;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(10px);
+}
+
+.media-container {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+img, iframe {
+    max-width: 100%;
+    max-height: 45%;
+    object-fit: contain;
+    opacity: 0.8;
+    mix-blend-mode: screen;
+    animation: float 5s ease-in-out infinite;
+    pointer-events: auto;
+}
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+}
+
+button {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .slide.active {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .content-wrapper, .media-container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    ul {
+        font-size: 3vw;
+    }
+
+    img, iframe {
+        max-height: 30vh;
+        margin-top: 20px;
+    }
+}
