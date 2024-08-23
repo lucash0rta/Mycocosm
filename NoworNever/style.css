@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FF4D6D, #7A0023);
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    height: 40px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.explore-btn {
+    background-color: #FF4D6D;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.event-info {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.article-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+
+.carousel-container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+.carousel-button.prev {
+    left: 10px;
+}
+.carousel-button.next {
+    right: 10px;
+}
+
+#floatingWindow {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 580px;
+    border: 2px solid #999;
+    background-color: #f1f1f1;
+    z-index: 10;
+}
+
+#windowHeader {
+    padding: 10px;
+    background-color: #e6005c;
+    color: white;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#windowTitle {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#closeBtn {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    
+    article {
+        padding: 1rem;
+    }
+}
