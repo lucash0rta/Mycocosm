@@ -4,48 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PARIS ONLINE</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#about">ABOUT</a>
-            <a href="#archive">ARCHIVE</a>
-        </nav>
-    </header>
 
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="archive.html">Archive</a></li>
+        </ul>
+    </nav>
 
+    <!-- The landing page Gif and image within the div -->
 
-    <div class="sections">
-        <!-- First / Landing Page -->
-        <div class="section grain" id="section1">
-            <video class="background-video" autoplay loop muted>
-                <source src="https://live.staticflickr.com/video/53987883439/303fcae599/1080p.mp4?s=eyJpIjo1Mzk4Nzg4MzQzOSwiZSI6MTcyNjIxMjk5NywicyI6ImVlNWEyOTRiN2U1YjI3OTc5NmY4N2Y0OTBiMzgyYWI5MTA4MjM0MTUiLCJ2IjoxfQ" type="video/mp4">
-            </video>
-            <div class="section-content">
-                <img class="mainLogo" src="logo.png" alt="Paris Online Logo">
-            </div>
-        </div>
-        <!-- List of video works Page -->
-        <div class="section grain" id="section2">
-            <video class="background-video" autoplay loop muted>
-                <source src="video2.mp4" type="video/mp4">
-            </video>
-            <div class="section-content">
-                <div class="video-list">
-<div class="gradient-bg"></div>
-<div class="video-item" data-video="https://live.staticflickr.com/video/53989936634/5807cace6d/1080p.mp4?s=eyJpIjo1Mzk4OTkzNjYzNCwiZSI6MTcyNjIxNDMyMiwicyI6ImEzZmU3YjhhYTNmYWY1MzhjNGRhOTg2NjM0ZjgwMjk3YmViYjQ2ZTIiLCJ2IjoxfQ">Bod</div>
-<div class="video-item" data-video="https://live.staticflickr.com/video/53989856843/4f2cb89af5/1080p.mp4?s=eyJpIjo1Mzk4OTg1Njg0MywiZSI6MTcyNjIxNDUxMiwicyI6IjAzNDI2ZWE2YmJmNDhjNWNlOTQxZGYwNWVmNjI5MzMxNmYwNTUxNmMiLCJ2IjoxfQ">Evanora</div>
-<div class="video-item" data-video="https://live.staticflickr.com/video/53989936679/1a21326976/1080p.mp4?s=eyJpIjo1Mzk4OTkzNjY3OSwiZSI6MTcyNjIxNDQ4OSwicyI6IjgwMjNiMmRmMzFkM2E4YTEyOTVmNDhiOWU1MjJmNTZkNmQ0NzMwNjkiLCJ2IjoxfQ">Lili Castiglioni</div>
-<div class="video-item" data-video="https://live.staticflickr.com/video/53988725397/2931f36dc9/1080p.mp4?s=eyJpIjo1Mzk4ODcyNTM5NywiZSI6MTcyNjIxNDQ2NiwicyI6IjlhY2NhM2NjNzA1YTIxNWNiNDFiYjAzMGNjMjA4ZWI1ZjMyNjE0MTAiLCJ2IjoxfQ">She Diamond</div>
-<div class="video-item" data-video="https://live.staticflickr.com/video/53989621261/4edafbc371/1080p.mp4?s=eyJpIjo1Mzk4OTYyMTI2MSwiZSI6MTcyNjIxNDU0MSwicyI6IjQzMWFmY2MxZDEyYWVlY2EwZGUzOWNkNGUwODkyOGI4NjJhYzZlN2EiLCJ2IjoxfQ">Barbro & Mija</div>
-<div class="video-item" data-video="https://live.staticflickr.com/video/53990046305/303e09ef39/1080p.mp4?s=eyJpIjo1Mzk5MDA0NjMwNSwiZSI6MTcyNjIxNDU1OCwicyI6IjU4MWNjOTQxNGQxYmJiYThjZWEyZmRjNDg1MjA5MmQxZjFlZTdmYmIiLCJ2IjoxfQ">Thanas</div>
-
-                </div>
-            </div>
-        </div>
+    <div class="logoContainerForCentering">
+        <img id="mainLogo" src="logo.png" alt="Paris Online Logo">
     </div>
 
-<script src="java.js"></script>
+
+       
+    </div>
+
+
+    <div class="video-list">
+        <!-- class : video-item  for styling -->
+        <!-- data-gif : url of the gif -->
+        <!-- then the name that appears on the list.  -->
+         
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWEwdG54c2liY2puNTUzM20zbmFvendpdHRieTdtb3IzNDM2OWNzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oeJGWaW6HvJOrCajJN/giphy.gif" alt="Paris Online" class="backgroundGif" id="ParisOnlineGif">
+
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTMyNmdid3J6d2p1dGRzNThzZWJ5dHFxZGRwNzQ2Z2F3a3RoeXd2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p5YO8gXqAxyQx84BqL/giphy.gif" alt="Evanora" class="backgroundGif" id="EvanoraGif">
+
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVmc2FtY2k5aWtseXB3enplM2U5NWV6bDkzeXc5ZmxycGEyNTB5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DQxitVYDC3KqGqezgM/giphy.gif" alt="Lili Castiglioni" class="backgroundGif" id="LiliCastiglioniGif">
+
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzI4M2V6M3dpazZhOGF6M2tlMTQ3OHI2Mmx2bW02NTh0d2dxaWdvMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ow2deg2drO8E8fxWJ5/giphy.webp" alt="She Diamond" class="backgroundGif" id="SheDiamondGif">
+        
+        
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnMybm9jcG55dGduaXJ0b2ttdnVyeHM2NmF4NTJhbXA1OXEwc3NuOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/t9UwcXuTSC5bMvLEtc/giphy.gif" alt="Barbro & Mija" class="backgroundGif" id="BarbroMijaGif">
+
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnF2Z3Z3MjNjejdlcmJ1N2NtZzVnZ2R3ejA1ZzR3MGIwbjlzZTR1MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lM5ON3EcTx4MqdHt9R/giphy.gif" alt="Bod Rush" class="backgroundGif" id="BodRushGif">
+
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTU1cm15MjU4Z3Nxams5eXgzM2p6cnptejBxMnVjcjVjeHhkMXdjeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qBa3XgSzxBwl6koabk/giphy.gif" alt="Thanas" class="backgroundGif" id="ThanasGif">
+        
+    </div>
+
+    <div class="testingScroll">
+        <div class="heightbox" id="EvanoraTitle"><h2><a href="evanora.html">Evanora</a></h2></div>
+        <div class="heightbox" id="LiliCastiglioniTitle"><h2><a href="lili_castiglioni.html">Lili Castiglioni</a></h2></div>
+        <div class="heightbox" id="SheDiamondTitle"><h2><a href="she_diamond.html">She Diamond</a></h2></div>
+        <div class="heightbox" id="BarbroMijaTitle"><h2><a href="barbro_mija.html">Barbro & Mija</a></h2></div>
+        <div class="heightbox" id="BodRushTitle"><h2><a href="bod_rush.html">Bod Rush</a></h2></div>
+        <div class="heightbox" id="ThanasTitle"><h2><a href="thanas.html">Thanas</a></h2></div>
+    </div>
+
+    <!-- Additional height to be able to test the scroll  -->
+    <div class="testingScroll"></div>
+
+    <script src="java.js"></script>
 </body>
 </html>

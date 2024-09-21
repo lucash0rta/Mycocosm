@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: auto;
+    padding: 0;
+    max-width: 1000px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/* Top Navigation Bar */
+.nav-menu {
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Align it at the top of the page */
+    left: 0; /* Stretch it across the entire width */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+    color: white;
+    z-index: 1; /* Keeps it above other content */
+    list-style-type: none;
+}
+
+
+
+/* Setting the text decoration to none allows the usual hyperlink style to be overwritten */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 200px;
+    display: inline-block;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    position: relative;
+}
+.column {
+    text-align: left;
+    width: 45%;
+}
+.title {
+    color: #d36fc0;
+    font-weight: bold;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 5px 0;
+    color: #333;
+}
+.timeline-item {
+    margin-bottom: 30px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
