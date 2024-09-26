@@ -46,3 +46,19 @@ a {
 a:hover {
     border-bottom: 1px solid #fff;
 }
+
+
+.tiktok-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1220px;
+    margin: 0 auto;
+    background-color: #cccccc00;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
