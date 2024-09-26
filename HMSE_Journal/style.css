@@ -62,3 +62,7 @@ img {
     height: auto;
     margin-bottom: 20px;
 }
+
+.img {
+    max-width: 300px;
+}
