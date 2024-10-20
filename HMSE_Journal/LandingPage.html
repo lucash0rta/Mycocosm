@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMSE JOURNAL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Courier New", monospace;
+            background-color: #6e6e6e;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1300px;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ccc;
+            font-size: 4em;
+            text-align: center;
+            text-shadow: 3px 3px 0 #333, 6px 6px 0 #666;
+            animation: wobble 2s infinite;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 12px;
+        }
+
+        .button:hover {
+            background-color: #aeaeae;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .bouncing-gif {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            transition: all 0.1s;
+            pointer-events: none;
+        }
+
+        @keyframes wobble {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="retro-bg">
+    <h1>HMSE JOURNAL</h1>
+    <div class="button-container">
+        <a href="index.html" class="button">Week 3</a>
+        <a href="Week4.html" class="button">Week 4</a>
+        <a href="Week5.html" class="button">Week 5</a>
+        <a href="Week6.html" class="button">Week 6</a>
+        <a href="Week7.html" class="button">Week 7</a>
+        <a href="Week8.html" class="button">Week 8</a>
+        <a href="Week9.html" class="button">Week 9</a>
+        <a href="Week10.html" class="button">Week 10</a>
+        <a href="Week11.html" class="button">Week 11</a>
+        <a href="Week12.html" class="button">Week 12</a>
+        <a href="Week13.html" class="button">Week 13</a>
+    </div>
+    <img class="bouncing-gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHBzOWpmMHk3eG45bHRwdXRvZm5iZ2t2dXo4bWlreDQzMXp6czdkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/AP8RQPJ4iZyv5ze2uQ/giphy.gif" alt="Bouncing GIF">
+    <img class="bouncing-gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHBzOWpmMHk3eG45bHRwdXRvZm5iZ2t2dXo4bWlreDQzMXp6czdkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/AP8RQPJ4iZyv5ze2uQ/giphy.gif" alt="Bouncing GIF">
+    <img class="bouncing-gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHBzOWpmMHk3eG45bHRwdXRvZm5iZ2t2dXo4bWlreDQzMXp6czdkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/AP8RQPJ4iZyv5ze2uQ/giphy.gif" alt="Bouncing GIF">
+    <img class="bouncing-gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHBzOWpmMHk3eG45bHRwdXRvZm5iZ2t2dXo4bWlreDQzMXp6czdkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/AP8RQPJ4iZyv5ze2uQ/giphy.gif" alt="Bouncing GIF">
+    <img class="bouncing-gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHBzOWpmMHk3eG45bHRwdXRvZm5iZ2t2dXo4bWlreDQzMXp6czdkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/AP8RQPJ4iZyv5ze2uQ/giphy.gif" alt="Bouncing GIF">
+    </div>
+    <script>
+        const gifs = document.querySelectorAll('.bouncing-gif');
+        
+        gifs.forEach(gif => {
+            let x = Math.random() * (window.innerWidth - gif.clientWidth);
+            let y = Math.random() * (window.innerHeight - gif.clientHeight);
+            let dx = (Math.random() - 0.5) * 10;
+            let dy = (Math.random() - 0.5) * 10;
+
+            function animate() {
+                const maxX = window.innerWidth - gif.clientWidth;
+                const maxY = window.innerHeight - gif.clientHeight;
+
+                x += dx;
+                y += dy;
+
+                if (x < 0 || x > maxX) dx = -dx;
+                if (y < 0 || y > maxY) dy = -dy;
+
+                gif.style.left = x + 'px';
+                gif.style.top = y + 'px';
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        });
+
+        // Monochrome text effect
+        const header = document.querySelector('h1');
+        setInterval(() => {
+            const shade = Math.floor(Math.random() * 256);
+            header.style.color = `rgb(${shade}, ${shade}, ${shade})`;
+        }, 500);
+    </script>
+</body>
+</html>
