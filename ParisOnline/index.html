@@ -6,13 +6,17 @@
     <title>PARIS ONLINE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="homePageBody"><!-- Setting the max scroll via a class name - set in style.css -->
+
+    <div class="navMenuShadow">
+        <!-- this is the nav menu shadow (styling is in style.css) -->
+    </div>
 
     <nav>
         <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="archive.html">Archive</a></li>
+            <li class="navMenuItem"><a href="index.html">Home</a></li>
+            <li class="navMenuItem"><a href="about.html">About</a></li>
+            <li class="navMenuItem"><a href="archive.html">Archive</a></li>
         </ul>
     </nav>
 
@@ -59,7 +63,7 @@
     </div>
 
     <!-- Additional height to be able to test the scroll  -->
-    <div class="testingScroll"></div>
+    <div class="additionalHeight"></div>
 
     <script src="java.js"></script>
 </body>

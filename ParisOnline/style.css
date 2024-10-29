@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 
+/* First, declare the custom font */
+@font-face {
+    font-family: 'Retrogression';
+    src: url('Retrogression-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'IBM Plex Sans', Arial, sans-serif;
+    color: white;
 }
 
 a {
@@ -12,8 +21,23 @@ a {
     color: inherit;
 }
 
-
-
+.navMenuShadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.374) 0%,
+        rgba(255, 255, 255, 0.897) 50%,
+        rgba(255, 255, 255, 0) 90%
+    );
+    background-size: 100px 80px, 100% 100%, 4px 4px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
 
 /* Top Navigation Bar */
 .nav-menu {
@@ -24,20 +48,27 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     box-sizing: border-box; /* Include padding in the element's total width */
-    color: white;
-    z-index: 1; /* Keeps it above other content */
+    color: rgb(0, 0, 0);
+    z-index: 2; /* Keeps it above other content */
     list-style-type: none;
 }
 
-
-
-/* Setting the text decoration to none allows the usual hyperlink style to be overwritten */
-.nav-menu a {
-    color: white;
-    text-decoration: none;
+.navMenuItem {
+    /* Add the transition to the base class */
+    transition: all 0.2s ease;
 }
+
+.navMenuItem:hover {
+    
+ color: #202020;
+ text-shadow: rgb(152, 152, 152) 1px 0 10px;
+    
+}
+
+
+
 
 .logoContainerForCentering{
     display: flex;
@@ -61,6 +92,12 @@ a {
     height: 100vh; /* Make the container full viewport height */
 }
 
+/* Additional Height for the Scroll system to only scroll to Thanas */
+
+.additionalHeight {
+    height: 37.5%;
+}
+
 .heightbox {
     height: 100px; /* Adjust as needed */
     display: flex;
@@ -68,6 +105,105 @@ a {
     justify-content: center; /* Center text horizontally within each box */
     margin: 10px 0; /* Space between the boxes */
     font-size: xx-large;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to allow natural flow */
+    margin-top: 100px; /* Space for nav bar */
+    padding: 40px 20px;
+    min-height: calc(100vh - 100px); /* Full height minus nav space */
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    color: #1a1a1a; /* Softer than pure black */
+}
+
+
+
+/* Typography */
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+/* Partner sections */
+.partner {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.partner:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Links styling */
+.about-container a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.about-container a:hover {
+    border-bottom-color: #1a1a1a;
+}
+
+/* Contact info section */
+.contact-info {
+    background-color: #f8f8f86f;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+.about-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-container {
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .about-section, 
+    .creative-partners, 
+    .current-volume {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
 }
 
 .backgroundGif {
@@ -103,4 +239,143 @@ a {
     overflow: hidden;
     transform: translate(-50%, -50%);
     z-index: -1;
+}
+
+/* Apply to nav menu */
+.nav-menu a, .nav-menu-about a {
+    font-family: 'Retrogression', sans-serif;
+    font-size: 1.54rem; /* Adjust size as needed */
+}
+
+/* Apply to headers */
+h1, h2, h3 {
+    font-family: 'Retrogression', sans-serif;
+}
+
+/* Specific size adjustments for different header levels */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 2.2rem;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+}
+
+
+/* Setting img as background for artists page */
+
+.backgroundArtistsPage {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    min-height: 100vh;
+    z-index: -5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('https://i.imgur.com/86BXmpu.png'); /* Specify your image */
+    background-size: cover; /* Ensures full coverage without stretching */
+    background-position: center; /* Centers the image horizontally and vertically */
+    background-repeat: no-repeat; /* Prevents tiling of the background */
+    background-attachment: fixed; /* Keeps the image fixed in place during scrolling */
+}
+
+.artist-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
+    position: relative;  /* Add this for positioning context */
+}
+
+.videoWrapperTest {
+    position: absolute;  /* Position above the video */
+    max-width: 1000px;
+    width: 100%;
+    z-index: 1;  /* Place above the video */
+    pointer-events: none;  /* Prevents mouse interaction */
+    opacity: 20%;
+    min-width: 800px;
+}
+
+.videoDidactic {
+    width: 80%;
+    max-width: 600px;
+}
+
+.youtubeVideoArtists {
+    position: relative;  /* Keeps video in document flow */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.artistHeader {
+    position: relative;  /* Establishes a positioning context */
+    display: inline-block;  /* Ensures the image and text are aligned */
+}
+
+.behindh1 {
+    position: absolute;  /* Positions the image absolutely within the header */
+    top: 60%;  /* Adjusts vertical position */
+    left: 50%;  /* Adjusts horizontal position */
+    transform: translate(-50%, -50%);  /* Centers the image */
+    width: 500px;  /* Adjust size as needed */
+    height: auto;  /* Maintains aspect ratio */
+    z-index: -1;  /* Places the image behind the text */
+    opacity: 70%;
+}
+
+/* Articles page styling */
+.articles-container {
+    width: 80%;
+    max-width: 800px;
+    color: black;
+    margin-top: -50px;
+}
+
+.featured-articles, .collaborator-articles {
+    margin-bottom: 1rem;
+}
+
+.articles-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.articles-container li {
+    transition: all 0.2s ease;
+}
+
+.articles-container a {
+    
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.articles-container a:hover {
+    text-shadow: 
+        /* Inner glow layers */
+        0 0 10px rgba(203, 203, 203, 0.9),
+        /* Outer glow */
+        0 0 5px rgb(232, 232, 232);
 }

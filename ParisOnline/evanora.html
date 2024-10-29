@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PARIS ONLINE</title>
-    <link rel="stylesheet" href="artists.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="archive.html">Archive</a></li>
+            <li class="navMenuItem"><a href="index.html">Home</a></li>
+            <li class="navMenuItem"><a href="about.html">About</a></li>
+            <li class="navMenuItem"><a href="archive.html">Archive</a></li>
         </ul>
     </nav>
 
+    <div class="backgroundArtistsPage"></div>
+
     <div class="artist-page">
         <div class="text-section">
-            <h2>Evanora</h2>
-            <p>Artist bio and description about the artwork. Add more detailed text here...</p>
+            <div class="artistHeader">
+                <h1>Evanora</h1>
+            </div>
         </div>
 
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTMyNmdid3J6d2p1dGRzNThzZWJ5dHFxZGRwNzQ2Z2F3a3RoeXd2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p5YO8gXqAxyQx84BqL/giphy.gif" alt="" id="backgroundGif">
+        <div class="video-section">
+            <img src="https://i.imgur.com/t4odAft.png" alt="" class="videoWrapperTest">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gs_1Kl9dqBM?si=-RzP-zCm69Z2-uBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtubeVideoArtists"></iframe>
+        </div>
+        
+        <div class="videoDidactic">
+            <p><em>Evanora: Unlimited</em></p>
+            
+            <p>A film on shawls featuring the multimedia project known as Evanora:Unlimited. Shot in Marseille during a full moon.</p>
+            
+            <p>Videography: Parisonline<br>
+            Script: Lord Flufflord<br>
+            Animations: Kseniia</p>
+            
+            <p>Music:
+            Marine Photosynthesis by Evanora:Unlimited</p>
+        </div>
     
         <div class="photo-grid">
             <div class="photo">Photo 1</div>
             <div class="photo">Photo 2</div>
             <div class="photo">Photo 3</div>
         </div>
-    
-        <div class="video-section">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gs_1Kl9dqBM?si=-RzP-zCm69Z2-uBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
     </div>
-    
 
     <script src="java.js"></script>
 </body>

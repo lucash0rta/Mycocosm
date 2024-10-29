@@ -4,37 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PARIS ONLINE</title>
-    <link rel="stylesheet" href="artists.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="archive.html">Archive</a></li>
+            <li class="navMenuItem"><a href="index.html">Home</a></li>
+            <li class="navMenuItem"><a href="about.html">About</a></li>
+            <li class="navMenuItem"><a href="archive.html">Archive</a></li>
         </ul>
     </nav>
 
+    <div class="backgroundArtistsPage"></div>
+
     <div class="artist-page">
         <div class="text-section">
-            <h2>Lili Castiglioni</h2>
-            <p>Artist bio and description about the artwork. Add more detailed text here...</p>
+            <div class="artistHeader">
+                <h1>Lili Castiglioni</h1>
+            </div>
         </div>
 
-        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVmc2FtY2k5aWtseXB3enplM2U5NWV6bDkzeXc5ZmxycGEyNTB5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DQxitVYDC3KqGqezgM/giphy.gif" alt="" id="backgroundGif">
+        <div class="video-section">
+            <img src="https://i.imgur.com/t4odAft.png" alt="" class="videoWrapperTest">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NwrcgisruLA?si=hu0iFEMT73MIqFZB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtubeVideoArtists"></iframe>
+        </div>
+        
+        <div class="videoDidactic">
+            <p><em>Lili</em></p>
+            
+            <p>A film on the multiverse of the french musician Lili. Dedicated to her melody bizarroïde, she is now in between the dead and alive discussing the eternal remain, music. Shot in Pere-lachaise cemetery in spring 2024.</p>
+            
+            <p>Special thanks to:<br>
+            Lenaaretrash<br>
+            Axel von Sandager</p>
+            
+            <p>Music:<br>
+            Alabaster (coprod. Vilhelm)<br>
+            La reine du palais des courants d'air (coprod. abel31)</p>
+        </div>
     
         <div class="photo-grid">
             <div class="photo">Photo 1</div>
             <div class="photo">Photo 2</div>
             <div class="photo">Photo 3</div>
         </div>
-    
-        <div class="video-section">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/NwrcgisruLA?si=hu0iFEMT73MIqFZB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
     </div>
-    
 
     <script src="java.js"></script>
 </body>
