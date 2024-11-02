@@ -109,3 +109,23 @@ window.addEventListener('resize', updateEffects);
 
 // Initial call to set the initial state
 updateEffects();
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // If the element is in view
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            // Optional: stop observing after it's faded in
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    // Element becomes visible when it's 20% in view
+    threshold: 0.2
+});
+
+// Observe all elements with class bottomDidactic
+document.querySelectorAll('.bottomDidactic').forEach((element) => {
+    observer.observe(element);
+});

@@ -8,11 +8,41 @@
     font-style: normal;
 }
 
+/* Add Gothic60 font declaration */
+@font-face {
+    font-family: 'Gothic60';
+    src: url('Gothic60-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Keep the Aber Mono declarations */
+@font-face {
+    font-family: 'Aber Mono';
+    src: url('AberMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aber Mono';
+    src: url('AberMono-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aber Mono';
+    src: url('AberMono-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-family: 'Aber Mono', monospace;
     color: white;
 }
 
@@ -55,20 +85,56 @@ a {
     list-style-type: none;
 }
 
+/* Top Navigation Bar */
+.nav-menu-index {
+    position: fixed; /* Fixes the nav bar at the top */
+    top: 0; /* Align it at the top of the page */
+    left: 0; /* Stretch it across the entire width */
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-sizing: border-box; /* Include padding in the element's total width */
+    color: rgb(255, 255, 255);
+    z-index: 2; /* Keeps it above other content */
+    list-style-type: none;
+    font-family: 'Gothic60', serif;
+    font-size: 1.54rem; /* Adjust size as needed */
+}
+
 .navMenuItem {
     /* Add the transition to the base class */
     transition: all 0.2s ease;
 }
 
 .navMenuItem:hover {
-    
- color: #202020;
- text-shadow: rgb(152, 152, 152) 1px 0 10px;
-    
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
 }
 
 
+.bottomDidactic {
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    height: 800px;
+    z-index: -20;
+    color: black;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity s ease-in; /* Smooth transition for opacity */
+}
 
+.bottomDidactic.fade-in {
+    opacity: 1; /* End fully visible */
+}
 
 .logoContainerForCentering{
     display: flex;
@@ -219,6 +285,13 @@ h3 {
     z-index: -2;
 }
 
+.titleTerminal{
+    font-family: 'Aber Mono', monospace;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+}
+
 /* Media query for ultrawide screens */
 @media screen and (min-aspect-ratio: 1.8/1) {
     .backgroundGif {
@@ -242,14 +315,15 @@ h3 {
 }
 
 /* Apply to nav menu */
-.nav-menu a, .nav-menu-about a {
-    font-family: 'Retrogression', sans-serif;
+.nav-menu, .nav-menu-about a {
+    font-family: 'Gothic60', serif;
     font-size: 1.54rem; /* Adjust size as needed */
 }
 
 /* Apply to headers */
 h1, h2, h3 {
-    font-family: 'Retrogression', sans-serif;
+    font-family: 'Gothic60', serif;
+    letter-spacing: 0.02em;
 }
 
 /* Specific size adjustments for different header levels */
@@ -319,6 +393,8 @@ h3 {
 .videoDidactic {
     width: 80%;
     max-width: 600px;
+    font-family: 'Aber Mono', monospace;
+    font-weight: 300;
 }
 
 .youtubeVideoArtists {
@@ -378,4 +454,23 @@ h3 {
         0 0 10px rgba(203, 203, 203, 0.9),
         /* Outer glow */
         0 0 5px rgb(232, 232, 232);
+}
+
+.archive-list li {
+    margin-bottom: 1.5rem;
+    font-family: 'Aber Mono', monospace;
+    text-decoration: none;
+}
+
+.archive-list {
+    list-style: none;  /* Removes the bullets */
+    padding: 0;  /* Removes default padding */
+    margin: 0;
+}
+
+.article-subtitle {
+    display: block;
+    margin-left: 1rem;
+    color: #000000;
+    font-size: 0.9em;
 }
