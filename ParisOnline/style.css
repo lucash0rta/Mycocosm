@@ -16,6 +16,8 @@ body, html {
     font-weight: 400;
     color: white;
     font-size: 18px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100vw; /* Ensures width doesn't exceed viewport */
 }
 
 a {
@@ -702,8 +704,9 @@ h3 {
         height: 300px; /* Maintain aspect ratio */
     }
 
-    body {
+    body, html {
         overflow-x: hidden; /* Prevent horizontal scrolling */
+        width: 100vw; /* Ensures width doesn't exceed viewport */
     }
 }
 
