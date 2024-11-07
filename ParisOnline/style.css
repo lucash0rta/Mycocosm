@@ -116,11 +116,11 @@ a {
     margin: auto;
     padding-top: 50px;
     text-align: center;
-    height: 400px;
+    height: 300px;
     z-index: -20;
     color: black;
     opacity: 0; /* Start fully transparent */
-    transition: opacity 3s ease-in; /* Smooth transition for opacity */
+    transition: opacity 1s ease-in; /* Smooth transition for opacity */
     font-weight: 300;
     width: 100%;
     display: flex; /* Added to enable flexbox */
@@ -674,4 +674,37 @@ h3 {
     2px 0 30px rgb(152, 152, 152);
 
 }
+
+
+
+
+
+
+.video-section iframe {
+    width: 560px; /* Set width for desktop */
+    height: 315px; /* Set height for desktop */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .video-section {
+        width: 100%; /* Set width to 100% for mobile */
+        padding: 0; /* Remove any padding if necessary */
+    }
+
+    .videoWrapperTest {
+        width: 100%; /* Make the video wrapper take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .video-section iframe {
+        width: 100%; /* Make iframe full width on mobile */
+        height: 300px; /* Maintain aspect ratio */
+    }
+
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+}
+
 
