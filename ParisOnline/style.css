@@ -567,6 +567,10 @@ h3 {
     filter: blur(1px);
 }
 
+.imageGalleryGroup p {
+    font-family: 'Teko', sans-serif;
+}
+
 .overlayedTextGallery {
     position: absolute;
     top: 50%;
