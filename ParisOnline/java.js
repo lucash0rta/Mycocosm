@@ -6,7 +6,8 @@ const elementPairs = [
     { gif: 'SheDiamondGif', title: 'SheDiamondTitle' },
     { gif: 'BarbroMijaGif', title: 'BarbroMijaTitle' },
     { gif: 'BodRushGif', title: 'BodRushTitle' },
-    { gif: 'ThanasGif', title: 'ThanasTitle' }
+    { gif: 'ThanasGif', title: 'ThanasTitle' },
+    { element: 'homeSubtextMainPage', fullOpacityRange: 300, falloffRange: 200 }
 ];
 
 /**
@@ -103,12 +104,57 @@ function updateEffects() {
     });
 }
 
-// Add scroll and resize event listeners
-window.addEventListener('scroll', updateEffects);
-window.addEventListener('resize', updateEffects);
+
+
+
+/* added for opacity of textbox */
+
+function updateHomeSubtextOpacity() {
+    const windowHeight = window.innerHeight;
+    const homeSubtextElement = document.getElementById('homeSubtextMainPage');
+
+    if (homeSubtextElement) {
+        const homeSubtextRect = homeSubtextElement.getBoundingClientRect();
+        const homeSubtextCenterY = homeSubtextRect.top + homeSubtextRect.height / 2;
+        const distanceFromBottom = windowHeight - homeSubtextCenterY;
+        const fullOpacityRange = 200; // Full opacity range from the bottom of the screen
+        const falloffRange = 100; // Falloff range from the full opacity range
+
+        // Calculate the opacity based on the distance from the bottom of the screen
+        let opacity;
+        if (distanceFromBottom >= fullOpacityRange + falloffRange) {
+            opacity = 1; // Full opacity beyond the falloff range
+        } else if (distanceFromBottom <= fullOpacityRange) {
+            opacity = 0; // No opacity within the full opacity range
+        } else {
+            // Linear falloff between full opacity range and falloff range
+            opacity = 1 - (distanceFromBottom - fullOpacityRange) / falloffRange;
+        }
+
+        // Update the opacity of the #homeSubtextMainPage element
+        homeSubtextElement.style.opacity = opacity;
+    }
+}
+
+
+/* end of added for textbox  */
+
+
+
+// Add this to the existing event listeners
+window.addEventListener('scroll', () => {
+    updateEffects();
+    updateHomeSubtextOpacity();
+});
+
+window.addEventListener('resize', () => {
+    updateEffects();
+    updateHomeSubtextOpacity();
+});
 
 // Initial call to set the initial state
 updateEffects();
+updateHomeSubtextOpacity();
 
 // Create an Intersection Observer
 const observer = new IntersectionObserver((entries) => {
@@ -200,4 +246,7 @@ function handleSwipe() {
         }
     }
 }
+
+
+
 

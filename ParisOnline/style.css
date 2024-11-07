@@ -9,6 +9,10 @@
     font-style: normal;
 }
 
+p {
+    font-size: larger;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -16,7 +20,6 @@ body, html {
     font-weight: 400;
     color: white;
     font-size: 18px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     width: 100vw; /* Ensures width doesn't exceed viewport */
 }
 
@@ -96,6 +99,22 @@ a {
     color: white;
 }
 
+@media (max-width: 768px) {
+    .videoDidactic a {
+        color: white; /* Always white on mobile */
+        text-shadow: 
+        /* Inner glow layers */
+        0 0 5px rgba(152, 152, 152, 0.9),
+        0 0 10px rgba(152, 152, 152, 0.8),
+        0 0 15px rgba(152, 152, 152, 0.7),
+        /* Outer glow */
+        2px 0 20px rgb(152, 152, 152),
+        /* Additional outer glow for more intensity */
+        2px 0 30px rgb(152, 152, 152);
+    }
+}
+
+
 .navMenuItem {
     /* Add the transition to the base class */
     transition: all 0.2s ease;
@@ -118,7 +137,7 @@ a {
     margin: auto;
     padding-top: 50px;
     text-align: center;
-    height: 300px;
+    height: 900px;
     z-index: -20;
     color: black;
     opacity: 0; /* Start fully transparent */
@@ -138,12 +157,17 @@ a {
     /* Additional outer glow for more intensity */
     2px 0 30px rgb(152, 152, 152);
     color: white; /* This line is unchanged */
-    background: linear-gradient(to top, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 0) 100%);
-
+/*     background: linear-gradient(to top, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 0) 100%);
+ */
 }
 
 .bottomDidactic.fade-in {
     opacity: 1; /* End fully visible */
+}
+
+.bottomDidacticTextBox {
+    width: 100%;
+
 }
 
 .logoContainerForCentering{
@@ -236,7 +260,6 @@ h3 {
 
 /* Partner sections */
 .partner {
-    border-bottom: 1px solid #eee;
     padding-bottom: 30px;
     margin-bottom: 30px;
 }
@@ -270,7 +293,6 @@ h3 {
 .about-footer {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #eee;
     text-align: center;
     font-size: 14px;
     color: #666;
@@ -297,9 +319,7 @@ h3 {
         font-size: 18px;
     }
 
-    p {
-        font-size: 15px;
-    }
+
 }
 
 .backgroundGif {
@@ -402,6 +422,8 @@ h3 {
     color: black;
     text-align: center;
     margin-top: 40px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .video-section {
@@ -426,7 +448,7 @@ h3 {
 
 .videoDidactic {
     width: 80%;
-    max-width: 600px;
+    max-width: 560px;
     font-weight: 300;
     font-family: "Newsreader", serif;
 }
@@ -534,12 +556,12 @@ h3 {
 .imageGalleryGroup img {
     width: 100%; /* Make the image take the full width of the container */
     height: auto; /* Maintain aspect ratio */
-    filter: blur(10px);
+    filter: blur(3px);
     transition: filter 0.5s ease;
 }
 
 .imageGalleryGroup img:hover {
-    filter: blur(5px);
+    filter: blur(1px);
 }
 
 .overlayedTextGallery {
@@ -638,7 +660,8 @@ h3 {
 }
 
 #tovaAndJulia {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
 }
 
 /* Apply Impact font to the She Diamond header */
@@ -657,6 +680,22 @@ h3 {
     /* Additional outer glow for more intensity */
     2px 0 30px rgb(152, 152, 152);
 
+}
+
+.about-container h2 {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 3rem; /* Adjust size as needed */
+        font-weight: 500;
+    color: white;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
 }
 
 /* Top Navigation Bar */
@@ -705,9 +744,27 @@ h3 {
     }
 
     body, html {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+       
         width: 100vw; /* Ensures width doesn't exceed viewport */
     }
 }
+
+
+/* Subtext on the home page  */
+#homeSubtextMainPage {
+    width: 100%;
+    align-content: center;
+    margin-bottom: -200px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(177, 177, 177) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: opacity 0.5s ease; /* Just opacity for simplicity */
+    opacity: 0;  /* Default opacity */
+}
+
+
+
+
+
+
 
 
