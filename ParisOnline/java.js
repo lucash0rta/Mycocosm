@@ -129,3 +129,75 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.bottomDidactic').forEach((element) => {
     observer.observe(element);
 });
+
+
+
+/* image overlay gallery script  */
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function openGallery() {
+    document.getElementById('galleryOverlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    showSlide(currentSlide);
+}
+
+function closeGallery() {
+    document.getElementById('galleryOverlay').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Event Listeners
+document.querySelector('.next').addEventListener('click', nextSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (document.getElementById('galleryOverlay').style.display === 'block') {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'Escape') closeGallery();
+    }
+});
+
+// Touch swipe support
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.querySelector('.carousel-container').addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.querySelector('.carousel-container').addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            nextSlide(); // Swipe left
+        } else {
+            prevSlide(); // Swipe right
+        }
+    }
+}
+

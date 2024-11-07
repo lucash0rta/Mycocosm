@@ -1,40 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&display=swap');
 
-/* First, declare the custom font */
+/* Declare the custom font Teko */
 @font-face {
-    font-family: 'Retrogression';
-    src: url('Retrogression-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Add Gothic60 font declaration */
-@font-face {
-    font-family: 'Gothic60';
-    src: url('Gothic60-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Keep the Aber Mono declarations */
-@font-face {
-    font-family: 'Aber Mono';
-    src: url('AberMono-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Aber Mono';
-    src: url('AberMono-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Aber Mono';
-    src: url('AberMono-Light.otf') format('opentype');
-    font-weight: 300;
+    font-family: 'Teko';
+    src: url('Teko-Regular.ttf') format('truetype');
+    font-weight: normal; /* Teko is typically used in regular weight */
     font-style: normal;
 }
 
@@ -42,8 +13,9 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Aber Mono', monospace;
+    font-weight: 400;
     color: white;
+    font-size: 18px;
 }
 
 a {
@@ -83,6 +55,8 @@ a {
     color: rgb(0, 0, 0);
     z-index: 2; /* Keeps it above other content */
     list-style-type: none;
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem; /* Increased font size for nav bar */
 }
 
 /* Top Navigation Bar */
@@ -99,8 +73,25 @@ a {
     color: rgb(255, 255, 255);
     z-index: 2; /* Keeps it above other content */
     list-style-type: none;
-    font-family: 'Gothic60', serif;
-    font-size: 1.54rem; /* Adjust size as needed */
+    font-size: 2rem; /* Increased font size for nav bar */
+    font-family: 'Teko', sans-serif;
+}
+
+.videoDidactic a {
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+    transition: all 0.5s;
+}
+
+.videoDidactic a:hover {
+    color: white;
 }
 
 .navMenuItem {
@@ -125,11 +116,28 @@ a {
     margin: auto;
     padding-top: 50px;
     text-align: center;
-    height: 800px;
+    height: 400px;
     z-index: -20;
     color: black;
     opacity: 0; /* Start fully transparent */
-    transition: opacity s ease-in; /* Smooth transition for opacity */
+    transition: opacity 3s ease-in; /* Smooth transition for opacity */
+    font-weight: 300;
+    width: 100%;
+    display: flex; /* Added to enable flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+    color: white; /* This line is unchanged */
+    background: linear-gradient(to top, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 0) 100%);
+
 }
 
 .bottomDidactic.fade-in {
@@ -145,9 +153,16 @@ a {
 
 /* Paris Online Main Logo on landing page */
 #mainLogo {
-    max-width: 300px;
+    max-width: 500px; /* Default size */
     z-index: 10;
-    text-shadow: 5px 5px 5px rgba(255, 255, 255, );
+    text-shadow: 5px 5px 5px rgba(255, 255, 255);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #mainLogo {
+        max-width: 300px; /* Adjust size for mobile */
+    }
 }
 
 .testingScroll {
@@ -170,7 +185,14 @@ a {
     align-items: center; /* Center text vertically within each box */
     justify-content: center; /* Center text horizontally within each box */
     margin: 10px 0; /* Space between the boxes */
-    font-size: xx-large;
+    font-size: x-large; /* Default font size */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .heightbox {
+        font-size: large; /* Adjust font size for mobile */
+    }
 }
 
 .about-container {
@@ -190,6 +212,12 @@ a {
 
 
 /* Typography */
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Teko', sans-serif; /* Updated to use Teko font */
+}
+
+
 h2 {
     font-size: 24px;
     font-weight: 500;
@@ -286,7 +314,7 @@ h3 {
 }
 
 .titleTerminal{
-    font-family: 'Aber Mono', monospace;
+
     font-weight: bold;
     font-size: large;
     text-decoration: underline;
@@ -316,32 +344,36 @@ h3 {
 
 /* Apply to nav menu */
 .nav-menu, .nav-menu-about a {
-    font-family: 'Gothic60', serif;
     font-size: 1.54rem; /* Adjust size as needed */
 }
 
-/* Apply to headers */
-h1, h2, h3 {
-    font-family: 'Gothic60', serif;
-    letter-spacing: 0.02em;
-}
 
 /* Specific size adjustments for different header levels */
 h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Increased header size */
     letter-spacing: 0.02em;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 3rem; /* Increased header size */
     letter-spacing: 0.02em;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 2.5rem; /* Increased header size */
     letter-spacing: 0.02em;
 }
 
+/* Specific weights for different elements */
+.newsreader-title {
+    font-family: "Newsreader", serif;
+    font-weight: 700; /* Bold for titles */
+}
+
+.newsreader-subtitle {
+    font-family: "Newsreader", serif;
+    font-weight: 300; /* Light for subtitles */
+}
 
 /* Setting img as background for artists page */
 
@@ -393,8 +425,8 @@ h3 {
 .videoDidactic {
     width: 80%;
     max-width: 600px;
-    font-family: 'Aber Mono', monospace;
     font-weight: 300;
+    font-family: "Newsreader", serif;
 }
 
 .youtubeVideoArtists {
@@ -406,6 +438,7 @@ h3 {
 .artistHeader {
     position: relative;  /* Establishes a positioning context */
     display: inline-block;  /* Ensures the image and text are aligned */
+    margin-top: 50px;
 }
 
 .behindh1 {
@@ -438,6 +471,7 @@ h3 {
 
 .articles-container li {
     transition: all 0.2s ease;
+    font-family: 'Teko', sans-serif;
 }
 
 .articles-container a {
@@ -456,11 +490,7 @@ h3 {
         0 0 5px rgb(232, 232, 232);
 }
 
-.archive-list li {
-    margin-bottom: 1.5rem;
-    font-family: 'Aber Mono', monospace;
-    text-decoration: none;
-}
+
 
 .archive-list {
     list-style: none;  /* Removes the bullets */
@@ -474,3 +504,174 @@ h3 {
     color: #000000;
     font-size: 0.9em;
 }
+
+.heightbox h2 {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 3em; /* Set font size to 3em */
+    letter-spacing: 0.02em; /* Keep existing letter spacing */
+}
+
+
+.heightbox a {
+  
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* stylisations for the gallery on the page ::: before opening the overlayed gallery */
+
+/* Image Gallery Group */
+.imageGalleryGroup {
+    position: relative;
+    width: 350px; /* Ensure both galleries have the same width */
+    margin: 40px auto;
+    cursor: pointer;
+}
+
+.imageGalleryGroup img {
+    width: 100%; /* Make the image take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    filter: blur(10px);
+    transition: filter 0.5s ease;
+}
+
+.imageGalleryGroup img:hover {
+    filter: blur(5px);
+}
+
+.overlayedTextGallery {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Fullscreen Gallery Overlay */
+.galleryOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.427);
+    backdrop-filter: blur(11px);
+    z-index: 1000;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 20px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    z-index: 1001;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1002;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.closeBtn:hover {
+    opacity: 1;
+}
+
+#tovaAndJulia {
+    width: 50%;
+}
+
+/* Apply Impact font to the She Diamond header */
+.artistHeader h1 {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 3rem; /* Adjust size as needed */
+        font-weight: 500;
+    color: white;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+
+}
+
+/* Top Navigation Bar */
+.nav-menu, .nav-menu-index {
+    font-family: 'Teko', sans-serif; /* Keep the existing font family */
+    font-size: 2rem; /* Increased font size for nav bar */
+    font-weight: 200;
+    color: white;
+    text-shadow: 
+    /* Inner glow layers */
+    0 0 5px rgba(152, 152, 152, 0.9),
+    0 0 10px rgba(152, 152, 152, 0.8),
+    0 0 15px rgba(152, 152, 152, 0.7),
+    /* Outer glow */
+    2px 0 20px rgb(152, 152, 152),
+    /* Additional outer glow for more intensity */
+    2px 0 30px rgb(152, 152, 152);
+
+}
+
