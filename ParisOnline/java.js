@@ -117,8 +117,10 @@ function updateHomeSubtextOpacity() {
         const homeSubtextRect = homeSubtextElement.getBoundingClientRect();
         const homeSubtextCenterY = homeSubtextRect.top + homeSubtextRect.height / 2;
         const distanceFromBottom = windowHeight - homeSubtextCenterY;
-        const fullOpacityRange = 200; // Full opacity range from the bottom of the screen
-        const falloffRange = 100; // Falloff range from the full opacity range
+        
+        // Halve the full opacity and falloff ranges to make the opacity change faster
+        const fullOpacityRange = 100; // Reduced full opacity range
+        const falloffRange = 50; // Reduced falloff range
 
         // Calculate the opacity based on the distance from the bottom of the screen
         let opacity;
