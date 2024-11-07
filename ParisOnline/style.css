@@ -417,6 +417,12 @@ h3 {
     background-attachment: fixed; /* Keeps the image fixed in place during scrolling */
 }
 
+@media (max-width: 768px) {
+    .backgroundArtistsPage {
+        height: 115vh; /* Sets the height slightly larger than the viewport */
+    }
+}
+
 .artist-page {
     display: flex;
     flex-direction: column;
