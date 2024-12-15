@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To exist is to change </title>
+    <style>
+        /* Existing CSS from the provided stylesheet */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        .landingPageInterviews {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .mainText {
+            padding-left: 4rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mainText h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .mainText p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        /* Additional styles for articles */
+        .article-container {
+            background-color: #1a1a1a;
+            padding: 2rem;
+        }
+
+        .article-item {
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+        }
+
+        .article-header {
+            background-color: #2a2a2a;
+            padding: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .article-header:hover {
+            background-color: #3a3a3a;
+        }
+
+        .article-header h3 {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .article-content {
+            padding: 1rem;
+            background-color: #1a1a1a;
+        }
+
+        .article-content img {
+            max-width: 500px;
+            height: auto;
+            margin: 1rem 0;
+        }
+
+        .article-content h1, 
+        .article-content h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .article-content ul {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .article-content li {
+            color: #cccccc;
+            margin-bottom: 0.5rem;
+        }
+
+        .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 2;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.book-container {
+    background-color: #1a1a1a;
+
+
+}
+
+.book-item {
+    margin-bottom: 2rem;
+    border: 1px solid #333;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book-header {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-header:hover {
+    background-color: #3a3a3a;
+}
+
+.book-header h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.book-content {
+    padding: 2rem;
+    background-color: #1a1a1a;
+}
+
+.book-content img {
+    max-width: 300px;
+    height: auto;
+    margin: 2rem 0;
+    display: block;
+}
+
+.book-content h1, 
+.book-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.book-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+}
+
+/* Style for the final paragraphs */
+.book-container > p {
+    max-width: 800px;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    padding: 0 2rem;
+}
+
+.book-container > img {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    margin: 3rem auto;
+}
+
+
+
+    </style>
+ 
+        <!-- Add Bootstrap CSS and JS -->
+  
+</head>
+<body>
+        <!-- Navigation -->
+        <nav class="navigation">
+            <a href="CreativeSubmission.html" class="home-button">Creative Response</a>
+            <a href="criticalReflection.html" class="home-button">Critical Reflection</a>
+            <a href="ResearchDocumentation.html" class="home-button">
+                Documentation: Research Material </a>
+        </nav>
+    
+
+
+    <div class="landingPageInterviews">
+        <div class="mainText">
+            <h1>Documentation of Research Material</h1>
+            <p>Prior to leaving we of course had some lectures on zoom. During these lectures some outlines of the trip were laid out. I had taken some notes regarding the vulture restaurant, the recent floods in nepal, the recent civil war and although in a different country however relevent the struggles ongoing in bangladesh against the government and the gradual establishment of a new regime.</p>
+            
+            <p>I decided to scour the net for relevant articles, papers, youtube videos, news reports, I downloaded all of them to my mobile and my reading device so that I could learn while I flew to Nepal.</p>
+            
+            <img src="https://i.imgur.com/u96ERMI.png" alt="Preparation Notes" style="max-width: 100%; height: auto; margin: 1rem 0;">
+            
+            <p>Throughout the previous semester at university I had set up a method for notetaking and annotation that sync's to my note application feel free to go through the different articles - Titles provided, links and the notations I made at the time.</p>
+        </div>
+    </div>
+
+    
+    <div class="article-container">
+        <div id="articles-container"></div>
+    </div>
+
+    <div class="landingPageInterviews">
+        <div class="mainText">
+            <h1></h1>
+            <p>Through these initial readings I began to get an understanding of the history of nepal, the recent civil war, the placement in the world and current geopolitical issues such as india and china providing large loans or paying for infrastructure projects. The tourism industry in nepal and the conflicting opinions around conservation and the negative impacts on some peoples lives. 
+            </p>
+            
+         <p>After initially arriving many other refrences were made during the opening conversations / lectures at Yalamaya Kendra. The topics were spanning a broad range however there was this overall feeling of perverse fetishisation of suffering, of "indigenous" knowledges of the underdeveloped or the secret hidden knowledges or ways of life people were wanting to conserve or capture. 
+        </p>
+            
+            <img src="https://i.imgur.com/AIPV1RK.jpeg" alt="Preparation Notes" style="max-width: 100%; height: auto; margin: 1rem 0;">
+            
+            <p>Reading into the second chapter of civil imagination by Ariella Aisha Azoulay, thinking about the photograph, the things that make up the image, the imposition of the outsider, the acknowldgement of this or lack of this. There are similar ideas through the work of vilem flusser on photography or the technical image as in communicology;; a fairly typical exploration when it comes to images. Bringing together aesthetics and kant and the ready made. Talking about the image of the political photograph; I may not be summarising so well because I found it was dancing around any idea I was attempting to form alongside skepticism, voyeurism, orientalism and the reason why we were all here in Nepal. </p>
+
+            <p>So I spoke with chatGPT, I put in a journal entry I had written and asked it; </p>
+        <div id="imageContainer">
+            <img id="zoomImage" src="https://i.imgur.com/CObwvq1.png" alt="Zoomable Image">
+        </div>
+
+        <p>On another attempt it reccomended 'Orientalism' by Edward Said</p>
+
+
+    <p>So I downloaded both books from the website Anna's Archive and began reading</p>
+
+    I wont go too into depth because I will summarise these thoughts in my critical reflection however I will provide my highlighted sections in the same manner as the articles above. 
+        </div>
+
+    </div>
+
+    <div class="book-container">
+        <div id="books-container"></div>
+    
+        <p>This was all the main research done throughout the course and my time in nepal. I also began reading some Indian poetry that Sabin reccomended me; but this did not play into my critical lense but more my enjoyment and connection to a certain way of seeing or relating to the world and people.</p>
+    
+        <img src="https://m.media-amazon.com/images/I/81QrFAsO4tL._AC_UF1000,1000_QL80_.jpg" alt="Book cover" style="height: auto; max-width: 300px;">
+    
+        <p>The rest of the research I would say would be the interviews and conversations I had with the people I met in Nepal.</p>
+    </div>
+
+
+
+
+    </div>
+
+    </body>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const articlesContainer = document.getElementById('articles-container');
+  
+  // Function to convert markdown to HTML
+  function convertMarkdownToHTML(markdown) {
+    // Convert headers
+    markdown = markdown.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+    markdown = markdown.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+    
+    // Convert images
+    markdown = markdown.replace(/!\[([^\]]*)\]\(([^\)]+)\)/g, '<img src="$2" alt="$1">');
+    
+    // Convert lists
+    markdown = markdown.replace(/^- (.+)$/gm, '<li>$1</li>');
+    markdown = markdown.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+    
+    return markdown;
+  }
+
+  // Function to create article element
+  function createArticleElement(articleMarkdown) {
+    const articleDiv = document.createElement('div');
+    articleDiv.className = 'article-item';
+    
+    // Split the markdown into sections
+    const sections = articleMarkdown.split('## ');
+    
+    // Title (first section)
+    const titleMatch = sections[0].match(/^# (.+)/);
+    const title = titleMatch ? titleMatch[1] : 'Untitled Article';
+    
+    // Create header
+    const header = document.createElement('div');
+    header.className = 'article-header';
+    header.innerHTML = `<h3>${title}</h3>`;
+    
+    // Create content div
+    const content = document.createElement('div');
+    content.className = 'article-content';
+    content.innerHTML = convertMarkdownToHTML(articleMarkdown);
+    content.style.display = 'none';
+    
+    // Add click event to toggle
+    header.addEventListener('click', () => {
+      // Close all other open articles
+      document.querySelectorAll('.article-content').forEach(el => {
+        if (el !== content) {
+          el.style.display = 'none';
+        }
+      });
+      
+      // Toggle current article
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+    
+    articleDiv.appendChild(header);
+    articleDiv.appendChild(content);
+    
+    return articleDiv;
+  }
+
+  // Array of article markdowns (you'll replace these with your actual articles)
+  const articleMarkdowns = [
+    `# An Ode to Tharu Culture and Heritage
+![rw-book-cover](https://assets-cdn.kathmandupost.com/uploads/source/news/2024/third-party/Untitled3-1711766223.jpg)
+## Metadata
+- Author: [[Kantipur Media Group]]
+- Full Title: An Ode to Tharu Culture and Heritage
+- Category: #articles #nepal 
+- Summary: The multimedia exhibition 'Daule Daule' at Patan Museum highlights the rich culture and history of the Tharu community, which has often been overlooked and oppressed in Nepal. Through powerful imagery and storytelling, the exhibition showcases the daily lives and resilience of Tharu women, emphasizing their roles in both cultural traditions and political movements. It aims to raise awareness about their struggles and celebrate their heritage, encouraging visitors to support and amplify Tharu voices.
+- URL: https://kathmandupost.com/art-culture/2024/03/30/an-ode-to-tharu-culture-and-heritage
+## Highlights
+- Under the Muluki Ain of 1854, Tharu individuals were classified as "*paani chalne masinya matwali*", legally designated as touchable and enslavable. This law made them vulnerable to exploitation. Over time, many Tharu individuals were forced out of their homes and lands.
+- I wondered how this exhibition would impact people like me who, at one point, learned to downplay everything about their cultures and may have even resented their own identity because of the way we were treated.
+- Apart from images of individuals working, there are also pictures of a large grain storage built high off the ground in Chitwan in 1968. This demonstrates how the Tharu community used skilled methods to protect their rice from rats and rhinos.
+- We often see images of young Tharu women dressed up with makeup and jewellery, but we rarely see the reality of older women with weathered faces and rough hands.
+- Another noteworthy aspect of the exhibition is the curators' attempt to highlight the role of tharu women in social, political, and grassroots movements.`,
+
+    `# Bangladesh Staves Off More Adani Power Cuts
+
+![rw-book-cover](https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F4798c17f-2b74-41fd-af18-8a51e46500fc.jpg?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1)
+
+## Metadata
+- Author: [[Chris Kay]]
+- Full Title: Bangladesh Staves Off More Adani Power Cuts
+- Category: #articles
+- Summary: Bangladesh avoided further power cuts from the Adani Group by providing a new credit letter and promises to pay its electricity bills. The country owes about $850 million, and Adani threatened to stop power supplies if it did not receive assurances. Bangladesh's government is negotiating financial support with organizations like the IMF to improve its economic situation.
+- URL: https://www.ft.com/content/c377bbc4-8fb6-421d-bb04-16690311b3b2
+
+## Highlights
+- The power dispute comes as Nobel laureate Muhammad Yunus, the country’s caretaker leader, is grappling with an economic crisis. The government in Dhaka is in talks with lenders, including the IMF and Asian Development Bank, for budgetary support to bolster its economy and replenish dwindling foreign exchange reserves. ([View Highlight](https://read.readwise.io/read/01jc7j5vb10m40e5gtjyggb0xn))
+    - Note: Bangladesh turning to the IMF could this be an american ploy to be able to instill free market economics during the interim and as bangladesh moves forward. A debt passed down. Could this be integral to root causes and instances of escalation by the previous ruling party?
+- The electricity curbs and deadline imposed by the conglomerate prompted a heated response from Bangladesh’s new government, which took control following the ousting of autocratic leader Sheikh Hasina by student protesters in August.
+  Muhammad Fouzul Kabir Khan, chief energy adviser to Yunus’s government, told the FT earlier this week that “we would not allow any power producer to hold us hostage” but added that [Bangladesh](https://www.ft.com/bangladesh) was “ramping up payments to all power producers as the economy improves”.
+  Adani has asked Bangladesh to settle its electricity dues at the end of the current financial year ending in March 2025, according to the person close to the talks between the company and Dhaka. ([View Highlight](https://read.readwise.io/read/01jc7jdcdnfv2k6bext6r5kaes))
+    - Note: Adani placing pressure on the New leadership. This will then force them to the IMF famous for, adhering to regulations that benefit global Companies to come in and quickly. Privatise industry
+ `,
+
+ `# China Got a Big Contract. Nepal Got Debt and a Pricey Airport.
+
+![rw-book-cover](https://web.archive.org/web/20240919020132im_/https://static01.nyt.com/images/2023/10/07/multimedia/00china-nepal-chwg/00china-nepal-chwg-facebookJumbo.jpg)
+
+## Metadata
+- Author: [[Daisuke Wakabayashi]]
+- Full Title: China Got a Big Contract. Nepal Got Debt and a Pricey Airport.
+- Category: #articles
+- Summary: Nepal built a new international airport with funding and construction by Chinese companies, leading to significant debt for the country. While China sees this project as part of its Belt and Road Initiative, Nepal struggles to attract enough flights to repay the loans. Many Nepali officials are concerned about the high costs and lack of oversight in the airport's construction.
+- URL: https://web.archive.org/web/20240919020132/https://www.nytimes.com/2023/10/16/business/nepal-pokhara-airport-china.html
+
+## Highlights
+- ![](https://web.archive.org/web/20240919020132im_/https://static01.nyt.com/images/2023/10/05/multimedia/00china-nepal-03-bclg/00china-nepal-03-bclg-superJumbo.jpg?quality=75&auto=webp) ([View Highlight](https://read.readwise.io/read/01jca39h68qadse48r72mw753k))
+- ![](https://web.archive.org/web/20240919020132im_/https://static01.nyt.com/images/2023/10/05/multimedia/00china-nepal-03-bclg/00china-nepal-03-bclg-superJumbo.jpg?quality=75&auto=webp) ([View Highlight](https://read.readwise.io/read/01jca39heas4tbfb6jprg4ka6r))
+ `,
+
+ `# Good Intentions Gone Wrong
+
+![rw-book-cover](https://assets.rumsan.net/clients/recordnepal/1620215685553-bardiya-national-park1.jpg)
+
+## Metadata
+- Author: [[The Record]]
+- Full Title: Good Intentions Gone Wrong
+- Category: #articles #nepal
+- Summary: Nepal's conservation practices are harming indigenous communities by restricting their access to land and resources. The government has militarized protected areas, leading to harassment and violence against local people who rely on these lands for their livelihoods. Promises made to the communities have been broken, resulting in ongoing poverty and exclusion from development.
+- URL: https://www.recordnepal.com/good-intentions-gone-wrong
+
+## Highlights
+- In 2013, the government unilaterally decided to mobilize the army in two more protected areas predominantly inhabited by indigenous ethnic groups: Makalu Barun National Park in the eastern region and Dhorpatan Hunting Reserve in the central region. The government claims the army will control illegal poaching and land encroachment in these areas. The locals have opposed the decision, saying militarizing their home areas will further persecute them. ([View Highlight](https://read.readwise.io/read/01jc6wdayt90vvmgawkq7bq1z9))
+- They eventually accepted the decision after the government assured them that the conservation project would not hamper their livelihoods and culture, that the army would not be mobilized, and that the revenue from the park would be used for community development. These turned out to be hollow promises. In the following years, the locals’ access to resources in the area was gradually curtailed. Their traditional farming practices, such as swidden agriculture, were banned. They were told they could not carry out any community development work without the permission of the park authorities. When the locals decided to collect money from each household to start a micro hydropower project to bring electricity to their village, the park did not grant them permission. Before long people began to be arrested, beaten, and penalized for using forest resources. ([View Highlight](https://read.readwise.io/read/01jc6wg12mcqt01w7qx2dzp02g))
+- These parks and protected areas were created despite objections from the local people, without taking their interests and needs into account. The National Parks and Wildlife Conservation Act contains no provisions to protect their right to consultation or access to land and resources. People who live in these areas routinely face injustices at the hands of park authorities, security forces, and forestry officials. They have lost their land and livelihoods; their traditional ways of life have been wiped out; they have been displaced and denied compensation for their losses; they are prohibited from grazing their cattle on the common pasture; they are harassed, beaten, fined, and, in some cases, raped and killed. An incident that immediately comes to mind is the rape and murder of three Dalit women (one was 12) in Bardiya National Park in March 2010. The three women, all from the same family, had gone to collect the bark of *kaulo* in the forest when Nepal Army soldiers patrolling the park attacked them. ([View Highlight](https://read.readwise.io/read/01jc6wxma5vdd16m2qtq3v97jv)) `,
+
+`# In a Likely Overture to China, Nepal Lifts Ban on TikTok
+
+![rw-book-cover](https://web.archive.org/web/20240926132438im_/https://static01.nyt.com/images/2024/07/14/multimedia/22nepal-tiktok/22nepal-tiktok-facebookJumbo.jpg)
+
+## Metadata
+- Author: [[Bhadra Sharma]]
+- Full Title: In a Likely Overture to China, Nepal Lifts Ban on TikTok
+- Category: #articles
+- Summary: Nepal's Prime Minister K.P. Sharma Oli lifted a ban on TikTok, signaling a desire to improve relations with China. The app was previously banned for not addressing hate speech concerns. Now, TikTok must follow new rules to promote tourism and digital safety in Nepal.
+- URL: https://web.archive.org/web/20240926132438/https://www.nytimes.com/2024/08/22/world/asia/nepal-tiktok-china.html
+
+## Highlights
+- The new prime minister of Nepal, K.P. Sharma Oli, on Thursday overturned a ban on TikTok that his predecessor imposed in November, an apparent sign that the veteran politician intended to strengthen the country’s relations with China, its northern neighbor. ([View Highlight](https://read.readwise.io/read/01jccfpm89e82cm16qy35jmrt5))
+- Prithvi Subba Gurung, a Nepalese government spokesman, said TikTok would now have to abide by certain directives, such as naming a point of contact in the country. ([View Highlight](https://read.readwise.io/read/01jccfw2dxqtvwkkw59mhw8mdb))`,
+
+`# Jokhan Ratgainya: One Person, Many Personalities
+
+![rw-book-cover](https://readwise-assets.s3.amazonaws.com/static/images/article0.00998d930354.png)
+
+## Metadata
+- Author: [[sankuchy]]
+- Full Title: Jokhan Ratgainya: One Person, Many Personalities
+- Category: #articles #nepal 
+- Summary: Jokhan Ratgaiya was a dedicated leader who fought against discrimination faced by the Tharu community in Nepal. He sacrificed his life during a military siege, but his legacy lives on through his activism, literature, and the inspiration he provided to others. Many Tharus continue to follow his principles and pursue the fight for equality and justice.
+- URL: https://tharuculture.blogspot.com/
+
+## Highlights
+- There was already discrimination from the State, on top of that when Tharus had to become bonded laborers on their own land, they were crushed. To end caste and class based biases Jokhan decided to be a part of the People’s War started by the Maoist Party. Before that he was a student activist affiliated to the Pan Nepal National Independent Student Union. He was successful in many campaigns after taking leadership roles within the Party. His colleague Hari Gyawali (Akhanda) recollects, “*At first we used to think what on earth could we change, just the two of us. Who would listen to us? But after you start something things do change. We were successful in many large campaigns such as weapon seizing*.” ([View Highlight](https://read.readwise.io/read/01jc6s195r0hmx0vrcncgm76yv))
+    - Note: This repeated as in the youtube documentary on the maoists that motivations were primarily poor people hoping for a change and to move away from the caste system. What grabbed the image of Mao?
+- His first published work was *Chorayil Man* (Stolen Heart). Which according to Krishnaraj Sarbahari is the first ghazal of the Tharu community. Jokhan was at the front of a progressive literary movement. He was always of the opinion that the voice of the Tharu community could be highlighted vis-à-vis literature. ([View Highlight](https://read.readwise.io/read/01jc6sqrvxq0gfzr8sv91h6p2x))
+`,
+`# Leader of Nepal’s Largest Communist Party Named New Prime Minister
+
+![rw-book-cover](https://www.aljazeera.com/wp-content/uploads/2024/07/2021-05-10T072109Z_733682968_RC2VCN9RLIJF_RTRMADP_3_NEPAL-POLITICS-1720966029.jpg?resize=1920%2C1440)
+
+## Metadata
+- Author: [[Al Jazeera]]
+- Full Title: Leader of Nepal’s Largest Communist Party Named New Prime Minister
+- Category: #articles
+- Summary: Khadga Prasad Sharma Oli, leader of Nepal's largest communist party, is the new prime minister, forming a new alliance in parliament. Oli, 72, will be sworn in for the fourth time, replacing the previous government after a coalition agreement. He will share power with the Nepali Congress party until the next election in 2027.
+- URL: https://www.aljazeera.com/news/2024/7/14/leader-of-nepals-largest-communist-party-named-new-prime-minister
+
+## Highlights
+- Oli entered politics as a teenager and spent 14 years in prison for campaigning to overthrow the monarchy. He joined the communist party in 1987 after his release and steadily rose through the ranks. ([View Highlight](https://read.readwise.io/read/01jc7jwh7grhjpkmwdadksn404))
+    - Note: The now prime minister of the country and leader of the nepali Marxist-leninist-union communist party
+- But governments have been unstable since, with the Himalayan nation of about 30 million people facing escalating economic challenges, especially after the devastating impact of the coronavirus pandemic on Nepal’s tourism industry.
+  Known for his nationalist views in a country dwarfed by its giant neighbours China and India, Oli is seen as more favourable to Beijing. ([View Highlight](https://read.readwise.io/read/01jc7k199y3r085px49c3be45e))
+    - Note: When thinking about economic crisis I tend to think earthquakes and revolution. I forgot about COVID
+`,
+`# Modernisation and Acculturation Are Forcing the Tharus to Be Assimilated Into the Mainstream – Uday Raj
+
+![rw-book-cover](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQKmDyD2kd7dhPRGsBaa8UeURaIJFEdt97-rL7xrZEHhrecjL1i8HAg3x6RaNnsTZIFJxeoSbcTiBTiI_QTgliz_VihhzuAE71czAPmr2mVCgMJ6UGIF7KVzf8i3PN5hkj-1V9OOB3pxA/w1200-h630-p-k-no-nu/Uday+Raj+-+Researcher1.jpg)
+
+## Metadata
+- Author: [[sankuchy]]
+- Full Title: Modernisation and Acculturation Are Forcing the Tharus to Be Assimilated Into the Mainstream – Uday Raj
+- Category: #articles #nepal 
+- Summary: Uday Raj, a researcher from Western Nepal, is writing a book about the Tharu people, focusing on their culture, history, and language. He discovered an old manuscript in the Tharu language and emphasizes the importance of preserving Tharu traditions in the face of modernization. Raj encourages young Tharus to explore their roots and protect their cultural identity.
+- URL: https://tharuculture.blogspot.com/2015/10/modernisation-and-acculturation-are.html
+
+## Highlights
+- Tharus are one of the indigenous ethnic groups of Terai region of Nepal. It is agreed that the Tharus are the first dwellers of Dang and Deukhuri valley. They have been inhabiting where there is easy access of water, forest, and plain land for cultivation. Even today they have not crossed the Mahabharat range for settlement. Many Tharus still write 'Chaudhari' as their surname. However, Chaudhari is the title given to a land revenue collector. Tharu is the tribal name. ([View Highlight](https://read.readwise.io/read/01jc61dqjaptg1k6qh51tq4y0d))
+- Tharus have different groups and clans. Morangiya, Chitwaniya, Dangaura, Desauriya, Kathariya, Rana etc. are the groups and Dahit, Ratgaiya, Satgouwa, Jaandchhabba, Ultaha, Pachhaldangiya etc. are the clans of the Tharus. Tharus, in fact, made the cultivable land in many parts of the Terai region. ([View Highlight](https://read.readwise.io/read/01jc61ebjqy2cb7nxr9jgwt0rw))
+- Dahit clan steals vegetables once in a year for ritual worship. ([View Highlight](https://read.readwise.io/read/01jc61hd93csndcevh6dsgcs1f))
+- Tharus are followers of animism. They have deep inter-relationship with nature and believe in supernatural power. *Gurwa*, a shaman or healer, performs ritual functions in individual family and the *Praganna*. Some *Gurwas* had received *Lalmohar* to control epidemics and dangerous wild animals in the past. ([View Highlight](https://read.readwise.io/read/01jc61hvkmv2831p4n4ve9tyqt))
+- Tharus draw mural paintings in their houses. Murals of different domestic as well as wild animals and birds are drawn on the wall in and outside the houses. It shows their deep faith in animals and birds. They draw mural painting of *Raavana* (one of the characters of the Ramayana) on the occasion of *Ashtimki* (the birthday of Lord Krishna) every year and worship at night. ([View Highlight](https://read.readwise.io/read/01jc61mp3jsgy1r8mqgcn1cz59))
+- ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_ZarPKBXzDX0voC5-Pd2N2tLXqSYIqzvc9Jf7T_zL9cO6yS33fDRoiJ3gWwsZde2csgHYrix8oTKEhZHdyn_1naCkINJGStXn3MhkQafBWuAfObkN3SNzA9ai5cLqGFETHI4OfwZmD7o/s400/Tharu+book+-+200+years+old.jpg)
+  A hand-written manuscript in Tharu language ([View Highlight](https://read.readwise.io/read/01jc61nqk3nmqdhj805e97cqhj))
+- Uday Raj: There is a lot to be done. Modernisation and acculturation are forcing the Tharus to be assimilated into the mainstream. Tharu youths are attracted towards the new and modern lifestyle. We should encourage the youths to search and protect the Tharu identity. Tharus have rich culture. Scholars and researchers should focus to expose cultural identity and age-old tradition. ([View Highlight](https://read.readwise.io/read/01jc61v5fwpynb62tfxrern9zp))
+    - Note: The plight of the destruction of the family is to isolate us, Make us atomized individuals so that the working class can accumulate less and consume more
+`,
+`# Mohammad Yunus Can Go Down in History as the Architect of a New Bangladesh
+
+![rw-book-cover](https://www.aljazeera.com/wp-content/uploads/2024/08/AFP__20240808__36CG4LE__v1__Preview__BangladeshPoliticsUnrestYunus-1723123628.jpg?resize=1200%2C630)
+
+## Metadata
+- Author: [[Mandeep Tiwana]]
+- Full Title: Mohammad Yunus Can Go Down in History as the Architect of a New Bangladesh
+- Category: #articles
+- Summary: Muhammad Yunus has a chance to lead Bangladesh towards true democracy after the resignation of long-time Prime Minister Sheikh Hasina. His government must prioritize civil society and democratic institutions to avoid repeating the mistakes seen in other countries after revolutions. If successful, Yunus could inspire positive change in Bangladesh and serve as a model for South Asia.
+- URL: https://www.aljazeera.com/opinions/2024/10/31/mohammad-yunus-can-go-down-in-history-as-the-architect-of-a-new-bangladesh
+
+## Highlights
+- He should, however, act fast, as history tells us moments of opportunity and optimism like this can be fleeting. After a dictatorial regime is removed through revolution, democratic structures can fall prey to a rotation of elites. In the absence of a plan for what’s next, pro-democracy elements can be overwhelmed and derailed by fast-moving events. ([View Highlight](https://read.readwise.io/read/01jc7kscp3eb7r9a5kby9s09wk))
+    - Note: Pair this with adani cutting off power as threat for repayment and the new government looking for loans it is an opportune time for predatorial capitalists to strike
+- In Sudan, for example, the 2019 overthrow of strongman President Omar al-Bashir was followed by several failed attempts at a democratic transition and eventually a military coup in 2021. Years later, civic space violations continue unabated and the country is still devastated by conflict. ([View Highlight](https://read.readwise.io/read/01jc7kz8myh6dhpjamnczttbxc))
+- In Ethiopia, when Prime Minister Abiy Ahmed received the Nobel Peace Prize in 2019 for finally securing a peace deal with Eritrea, hopes were high for regional peace and stability. Since then, however, he has presided over a bloody civil war in which mass atrocities were committed. The country is in turmoil, with human rights groups urging authorities to stop their crackdown on civic space and respect the rights of political opponents, journalists, and activists. ([View Highlight](https://read.readwise.io/read/01jc7m1q5jbpw4m412g60b0z2x))
+`,
+`# Reflections on My Time at the Jatayu Vulture Restaurant
+
+![rw-book-cover](https://readwise-assets.s3.amazonaws.com/static/images/article0.00998d930354.png)
+
+## Metadata
+- Author: [[photoktm.com]]
+- Full Title: Reflections on My Time at the Jatayu Vulture Restaurant
+- Category: #articles
+- Summary: The author shares his month-long experience at the Jatayu Vulture Restaurant in Nepal, where he learned about vulture conservation and the local Tharu heritage. He observed various vulture species and explored the Namuna Community Forest, which emphasizes the importance of conserving grasslands. The residency offered valuable insights into the region's biodiversity and the challenges faced by the indigenous Tharu community.
+- URL: https://photoktm.com/reflections-on-my-time-at-the-jatayu-vulture-restaurant/
+
+## Highlights
+- The sheer number of vultures that came to the feeding was impressive. I got to witness five species of vultures in one place. ([View Highlight](https://read.readwise.io/read/01jchptnayeg40xg4thzm3wtjk))
+`,
+`# violations-in-the-name-of-conservation
+
+![rw-book-cover](https://readwise-assets.s3.amazonaws.com/media/reader/parsed_document_assets/236027189/UvnI--YVRGMaPoxutmWvQl8YR6vdGdYDMjFKLLJRLu4-cove_T0K4Ncz.png)
+
+## Metadata
+- Author: [[Rehab Mahamoor]]
+- Full Title: violations-in-the-name-of-conservation
+- Category: #articles
+- URL: https://www.lahurnip.org/uploads/resource/file/violations-in-the-name-of-conservation.pdf
+
+## Highlights
+- There are many factors which have influenced the plight of Indigenous peoples: flawed legal provisions with respect to natural resources (such as providing immunity from prosecution for officers who have ‘no alternative’ but to shoot anyone breaching provisions of the National Parks and Wildlife Conservation Act, even if he or she dies), a narrow interpretation of these provisions by the courts and authorities in favour of national parks and to the detriment of Indigenous peoples, lack of proper documentation of the harms suffered and lack of consistent and concrete efforts by the authorities to provide redress. ([View Highlight](https://read.readwise.io/read/01jc7qs2n09vykqx017a2kcy9f))
+- Research (by Indigenous peoples and local communities) into co-managed and community-owned conservation areas shows they have on average more success in achieving conservation outcomes than protected areas that are exclusively state-run. ([View Highlight](https://read.readwise.io/read/01jc7r8dbgeq5hem01y9qranhj))
+`,
+
+
+  ];
+
+  // Render articles
+  articleMarkdowns.forEach(markdown => {
+    const articleElement = createArticleElement(markdown);
+    articlesContainer.appendChild(articleElement);
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const booksContainer = document.getElementById('books-container');
+  
+  // Function to convert markdown to HTML (reusing the existing function)
+  function convertMarkdownToHTML(markdown) {
+    // Convert headers
+    markdown = markdown.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+    markdown = markdown.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+    
+    // Convert images
+    markdown = markdown.replace(/!\[([^\]]*)\]\(([^\)]+)\)/g, '<img src="$2" alt="$1">');
+    
+    // Convert lists
+    markdown = markdown.replace(/^- (.+)$/gm, '<li>$1</li>');
+    markdown = markdown.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+    
+    return markdown;
+  }
+
+  // Function to create book element (very similar to article element)
+  function createBookElement(bookMarkdown) {
+    const bookDiv = document.createElement('div');
+    bookDiv.className = 'book-item';
+    
+    // Split the markdown into sections
+    const sections = bookMarkdown.split('## ');
+    
+    // Title (first section)
+    const titleMatch = sections[0].match(/^# (.+)/);
+    const title = titleMatch ? titleMatch[1] : 'Untitled Book';
+    
+    // Create header
+    const header = document.createElement('div');
+    header.className = 'book-header';
+    header.innerHTML = `<h3>${title}</h3>`;
+    
+    // Create content div
+    const content = document.createElement('div');
+    content.className = 'book-content';
+    content.innerHTML = convertMarkdownToHTML(bookMarkdown);
+    content.style.display = 'none';
+    
+    // Add click event to toggle
+    header.addEventListener('click', () => {
+      // Close all other open books
+      document.querySelectorAll('.book-content').forEach(el => {
+        if (el !== content) {
+          el.style.display = 'none';
+        }
+      });
+      
+      // Toggle current book
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+    
+    bookDiv.appendChild(header);
+    bookDiv.appendChild(content);
+    
+    return bookDiv;
+  }
+
+  // Array of book markdowns 
+  const bookMarkdowns = [
+    `# The Wretched of the Earth -- Frantz Fanon -- 1961
+
+![rw-book-cover](https://m.media-amazon.com/images/I/71BagB0AFxL.jpg)
+
+## Metadata
+- Author: [[Frantz Fanon]]
+- Full Title: The Wretched of the Earth -- Frantz Fanon -- 1961
+- Category: #books
+
+## Highlights
+- The political party may very well speak of the nation in emotional terms, but it is primarily interested in getting the people who are listening to understand that they must join in the struggle if they want quite simply to exist. (Page 218)
+- France’s stubborn determination to retain ties with people it will have to feed, whereas so many French citizens are in dire straits, reflects colonialism’s inability to transform itself into a nonpartisan aid program. Hence once again no need to waste time repeating “Better to go hungry with dignity than to eat one’s fill in slavery.” On the contrary we must persuade ourselves that colonialism is incapable of procuring for colonized peoples the material conditions likely to make them forget their quest for dignity. Once colonialism has understood where its social reform tactics would lead it, back come the old reflexes of adding police reinforcements, dispatching troops, and establishing a regime of terror better suited to its interests and its psychology. (Page 219)
+    
+- I say that I have decided to delve deeper. Since perhaps in their unconscious the colonized intellectuals have been unable to come to loving terms with the present history of their oppressed people, since there is little to marvel at in its current state of barbarity, they have decided to go further, to delve deeper, and they must have been overjoyed to discover that the past was not branded with shame, but dignity, glory, and sobriety. Reclaiming the past does not only rehabilitate or justify the promise of a national culture. It triggers a change of fundamental importance in the colonized’s psycho-affective equilibrium. Perhaps it has not been sufficiently demonstrated that colonialism is not content merely to impose its law on the colonized country’s present and future. Colonialism is not satisfied with snaring the people in its net or of draining the colonized brain of any form or substance. With a kind of perverted logic, it turns its attention to the past of the colonized people and distorts it, disfigures it, and destroys it. This effort to demean history prior to colonization today takes on a dialectical significance. (Page 220)
+    - Note: This is talking about the supplemental pride that reshapes the past via acdemic framing of a romantic. Peaceful or perfect indigenous being
+- Consequently the Arab states today are organically linked to Mediterranean societies and cultures. The reason being that these states are subject to modern pressures and new commercial channels, whereas the great trade routes of the days of Arab expansion have now disappeared. (Page 227)
+    - Note: Was nepal a part of an arab expansiion?
+- La dame n’était pas seule Elle avait un mari Un mari tres comme il faut Qui citait Racine et Corneille Et Voltaire et Rousseau Et le Pére Hugo et le jeune Musset Et Gide et Valéry Et tant d’autres encore. (Page 229)
+- Although this approach may take him to unusual heights in the sphere of poetry, at an existential level it has often proved a dead end. When he decides to return to the routine of daily life, after having been roused to fever pitch by rubbing shoulders with his people, whoever they were and whoever they may be, all he brings back from his adventures are terribly sterile clichés. He places emphasis on customs, traditions, and costumes, and his painful, forced search seems but a banal quest for the exotic. This is the period when the intellectuals extol every last particular of the indigenous landscape. The flowing dress of the boubou is regarded as sacred and shoes from Paris or Italy are shunned for Muslim slippers, babouches. The language of the colonizer suddenly scorches his lips. Rediscovering one’s people sometimes means in this phase wanting to be a “nigger,” not an exceptional “nigger,” but a real “nigger,” a “dirty nigger,” the sort defined by the white man. Rediscovering one’s people means becoming a “filthy Arab,” of going as native as possible, becoming unrecognizable; it means clipping those wings which had been left to grow. (Page 230)
+- In a second stage, the colonized writer has his convictions shaken and decides to cast his mind back. This period corresponds approximately to the immersion we have just described. But since the colonized writer is not integrated with his people, since he maintains an outsider’s relationship to them, he is content to remember. Old childhood memories will surface, old legends be reinterpreted on the basis of a borrowed aesthetic, and a concept of the world discovered under other skies. Sometimes this precombat literature is steeped in humor and allegory, at other times in anguish, malaise, death, and even nausea. Yet underneath the self-loathing, the sound of laughter can be heard. (Page 231)
+    - Note: We are the intellectuals here searching for the real indigenous knowledge. This supplement of an identity to bring the colonial view of the local and to mount it on display
+- The colonized intellectual, at the very moment when he undertakes a work of art, fails to realize he is using techniques and a language borrowed from the occupier. He is content to cloak these instruments in a style that is meant to be national but which is strangely reminiscent of exoticism. The colonized intellectual who returns to his people through works of art behaves in fact like a foreigner. Sometimes he will not hesitate to use the local dialects to demonstrate his desire to be as close to the people as possible, but the ideas he expresses, the preoccupations that haunt him are in no way related to the daily lot of the men and women of his country. The culture with which the intellectual is preoccupied is very often nothing but an inventory of particularisms. Seeking to cling close to the people, he clings merely to a visible veneer. This veneer, however, is merely a reflection of a dense, subterranean life in perpetual renewal. (Page 232)
+    - Note: The outsider relationship is one that australian intellectuls impse on other cultures. Confused or devoid of an indigenous cukture with only blood on his hands he tries to fill the gap of roots through a distorted colonial effort to reimagine the past of others. To uplift voices or stories from cultures as an effort to rid himself of the guilt and lack of this fetishised indigeneity
+
+`,
+
+  ];
+
+  // Render books
+  bookMarkdowns.forEach(markdown => {
+    const bookElement = createBookElement(markdown);
+    booksContainer.appendChild(bookElement);
+  });
+});
+
+
+    </script>
+    </html>
