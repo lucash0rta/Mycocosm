@@ -134,3 +134,19 @@ img {
     max-height: 400px;
 
 }
+
+.carouselImages {
+    display: flex;
+    justify-content: center; /* Centers images along the cross-axis */
+    align-items: center; /* Aligns items vertically */
+    margin: 20px;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures images stay in a single horizontal line */
+    scroll-behavior: smooth; /* Optional: adds smooth scrolling */
+  }
+  
+  .carouselImages img {
+    flex-shrink: 0; /* Prevents images from shrinking */
+    margin-right: 10px; /* Adds spacing between images */
+  }
+  
