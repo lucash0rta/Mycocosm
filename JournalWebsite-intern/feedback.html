@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Blog - ButterBaby</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            color: #2a2a2a;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: #3a3a3a;
+            margin-top: 1.5rem;
+        }
+        .media-container {
+            margin: 2rem 0;
+            max-width: 100%;
+        }
+        .media-container iframe,
+        .media-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        strong {
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Notes for ButterBaby</h1>
+
+    <div class="content">
+        <h2>Initial Content Ideas</h2>
+        <ul>
+            <li>An AR filter</li>
+            <li>A game like AR/VR Experience built in a game engine</li>
+            <li>Animation assets using the ButterBaby Character</li>
+            <li>A real time - production system</li>
+            <li>A method for motion capture using the Rokoko suit or AI mocap systems</li>
+            <li>Live footage or streaming using OBS and live overlays of animations for real-time content and live-streaming</li>
+            <li>Brief Methodologies for budget shooting</li>
+        </ul>
+
+        <h2>Initial Analysis</h2>
+        <ul>
+            <li>The Rokoko system is not as simple to adapt as advertised. I know some people that have used these and the animations require large amounts of labour time to conduct manual cleanup.</li>
+            <li>Real-time AI mocap remains jittery and unrefined, mostly suited for VR chat rooms or experimental art unless using advanced multi-camera setups.</li>
+        </ul>
+
+        <div class="media-container">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/832076606?h=7e7bc72de4" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h2>Post Production Enhancement</h2>
+        <p>The setting up of a usable green screen studio is a bit more difficult and requires someone to be more considerate of the lighting in the space that has experience with lighting a green screen space or studio.</p>
+        <p>Issues include shadows, uneven lit backdrop and colour spill.</p>
+        <p>Haptic Gloves are not necessary and are not standardised or implementable in any feasible or worthwhile way.</p>
+
+        <h2>Paths Forward for ButterBaby</h2>
+
+        <h3>Reusable animations implemented into the web and app design with 3.js and React</h3>
+        <p>Is the team wanting <strong>reusable 3d animated assets to use within the web?</strong></p>
+        <p>Example of importing a 3d animated asset into web using 3js - <a href="https://harmonious-lily-927201.netlify.app/">View Example</a> and also on my portfolio @ lucahsorta.com</p>
+        <p>This method could be used to include 3d animations more thoughtfully through a website and if building apps with react could be built into more advanced examples of web integrated 3js projects:</p>
+        <ul>
+            <li><a href="https://next.junni.co.jp/">https://next.junni.co.jp/</a></li>
+            <li><a href="https://moments.epic.net/#">https://moments.epic.net/#</a></li>
+            <li><a href="https://webgi-jewelry.vercel.app/">https://webgi-jewelry.vercel.app/</a></li>
+        </ul>
+
+        <h2>Implementable Augmented Reality Systems in a Post-TikTok World</h2>
+        <p>The past week has seen the closure of Meta's Spark AR Platform for developing augmented reality experiences and the company has cut all third parties from releasing new content of this kind.</p>
+        <p>The past week has also seen the banning of TikTok across the US. Notably tiktok is also banned in <strong>Pakistan, Afghanistan and India</strong>. Looking forward the future of this platform is unsteady and the supported services that will survive the transition are not clear. Therefore I propose an implementation of WebXR, MindAR and 3.js. All are open source libraries for javascript that can be implemented across the web and within React applications for future app development. This system works across most platforms including Android, IOS and PC.</p>
+
+        <div class="media-container">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTZvem5sOGF5ZGRtbDd4dWU0Z2c4djdpcTZ1NzhlNmgxcjF2a3dyMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GY1Z8JXJkLUZpMihE4/giphy.gif" alt="AR Demo">
+        </div>
+
+        <h2>Advertising Content, Photoshoots and Video Production with Compositing and VFX</h2>
+        <p>Larger budget shoots, lighting, location scouting, storyboarding, writing etc. Possibly better suited to a production company with film expertise.</p>
+        <p>Still images and videography would be manageable given time and budget.</p>
+
+        <h3>Inspiration</h3>
+        <div class="media-container">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTEzZWx6ZTRnNnVsYTAycGlxMmRjNG5yYzc1aGQ1Yjg4bGg0OXd2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XE6TRwYdTvJKnAjfG9/giphy.gif" alt="Inspiration">
+        </div>
+    </div>
+</body>
+</html>
