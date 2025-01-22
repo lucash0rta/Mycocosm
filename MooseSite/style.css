@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Heyam';
+    src: url('Heyam.ttf') format('truetype');
+  }
+
+/* Basic reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Heyam', sans-serif;
+}
+
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a-scene {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#capture-button {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(126, 117, 255);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px; /* Adjust padding to make it circular */
+    border: 5px solid white;
+    border-radius: 50%; /* Make button circular */
+    text-transform: uppercase;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    box-shadow: 5px 5px 0px black;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 9999;
+    width: 70px; /* Set a fixed width for the circle */
+    height: 70px; /* Set a fixed height to match the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#capture-button img {
+    width: 100%; /* Adjust image size to fit inside the circle */
+    height: 100%; /* Adjust image size to fit inside the circle */
+}
+
+#capture-button:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 8px 8px 0px black;
+}
+
+#capture-button:active {
+    transform: translateX(-50%) scale(0.9);
+    box-shadow: 3px 3px 0px black;
+}
+
+
+/* Modified screenshot container styling */
+#screenshot-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+#screenshot-img {
+    max-width: 90%;
+    max-height: 70vh;
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#close-btn {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background: rgba(3, 133, 255);
+    padding: 10px 10px;
+    border-radius: 50%;
+    z-index: 10001;
+    width: 30px;
+    height: 30px;
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+#close-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+#share-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.cloud {
+    position: absolute;
+    top: 10%;
+    width: 20%;
+    animation: moveCloud linear infinite;
+    z-index: 0;
+}
+
+.cloud1 { animation-duration: 40s; top: 10%; }
+.cloud2 { animation-duration: 50s; top: 15%; }
+.cloud3 { animation-duration: 60s; top: 20%; }
+
+@keyframes moveCloud {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: -25%;
+    }
+}
+
+#overlayedelements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+
+
+  #scanning-overlay img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

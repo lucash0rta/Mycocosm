@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="captureFullPage()" id="capture-button">
+        <img src="./Cam.png" alt="Camera Icon">
+    </button>
+    
+    
+   
+    <!-- Container for any HTML overlays -->
+    <div id="overlay-container">
+        <!-- Add your HTML overlays here -->
+    </div>
+
+    <div id="content">
+
+        <div id="overlayedelements">
+        <div class="clouds">
+            <img src="./clouds/Cloud1.png" class="cloud cloud1" alt="">
+            <img src="./clouds/Cloud2.png" class="cloud cloud2" alt="">
+            <img src="./clouds/Cloud3.png" class="cloud cloud3" alt="">
+        </div>
+        
+        
+            <img src="./clouds/background.png" alt="" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 101%;">
+            
+        
+            <img src="./clouds/Title.png" alt="" style="position: absolute; top: 40px; left: 50%; transform: translateX(-50%); width: 90%;">
+        
+            <img src="./clouds/Mooselogo.png" alt="" style="position: absolute; top: 140px; left: 50%; transform: translateX(-50%); width: 20%;">
+        
+            <img src="./clouds/still_bluey1.png" alt="" style="position: absolute; bottom: 0; left: 0; width: 40%; max-width: 800px;">
+
+    </div>
+
+    <!-- AFRAME SCENE FOR 3dAssets -->
+
+    <div id="scanning-overlay" class="hidden"><img src="./Searching.gif" alt=""></div>
+
+        <a-scene mindar-image="imageTargetSrc: ./targets.mind;
+                filterMinCF: 0.0001;
+                filterBeta: 100; uiError:no; uiLoading:no; uiScanning: #scanning-overlay"
+                vr-mode-ui="enabled: false";
+                device-orientation-permission-ui="enabled: false";
+                uiError:no; uiLoading:no; uiScanning:no>
+            
+            <a-assets>
+                <a-asset-item id="model" src="./TEST2.gltf"></a-asset-item>
+            </a-assets>
+            
+            <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+            
+            <a-entity mindar-image-target="targetIndex: 0">
+                <a-gltf-model rotation="-10 150 0" position="0 -1 0" scale="0.6 0.6 0.6"
+                             src="#model" animation-mixer></a-gltf-model>
+                <a-sky color="#ECECEC"></a-sky>
+            </a-entity>
+        </a-scene>
+    </div>
+    
+    <div id="screenshot-container">
+        <span id="close-btn" onclick="closeScreenshot()"><img src="./X.png" alt=""></span>
+        <img id="screenshot-img" alt="Screenshot">
+        <div id="share-text">Hold to save :)</div>
+    </div>
+
+
+    <!-- SCREENSHOT FUNCTIONALITY  -->
+
+    <script>
+        function captureFullPage() {
+          const button = document.getElementById('capture-button');
+          const screenshotContainer = document.getElementById('screenshot-container');
+          const screenshotImg = document.getElementById('screenshot-img');
+          const closeBtn = document.getElementById('close-btn');
+          const shareText = document.getElementById('share-text');
+      
+          button.style.display = 'none';
+      
+          // Get the video and canvas elements
+          const video = document.querySelector('video');
+          const aframeScene = document.querySelector('a-scene');
+          const overlayElements = document.getElementById('overlayedelements');
+          
+          // Create a canvas to combine everything
+          const finalCanvas = document.createElement('canvas');
+          const ctx = finalCanvas.getContext('2d');
+          
+          // Set canvas size to match viewport
+          finalCanvas.width = window.innerWidth;
+          finalCanvas.height = window.innerHeight;
+          
+          // Draw video feed if it exists
+          if (video) {
+              ctx.drawImage(video, 0, 0, finalCanvas.width, finalCanvas.height);
+          }
+      
+          // Draw overlay elements
+          if (overlayElements) {
+              const overlayItems = overlayElements.children;
+              
+              for (let i = 0; i < overlayItems.length; i++) {
+                  const item = overlayItems[i];
+                  
+                  // Get element's position and size using getBoundingClientRect
+                  const rect = item.getBoundingClientRect();
+                  const x = rect.left * (finalCanvas.width / window.innerWidth);
+                  const y = rect.top * (finalCanvas.height / window.innerHeight);
+                  const width = rect.width * (finalCanvas.width / window.innerWidth);
+                  const height = rect.height * (finalCanvas.height / window.innerHeight);
+                  
+                  // If the item is an image, draw it on the canvas
+                  if (item.tagName === 'IMG') {
+                      ctx.drawImage(item, x, y, width, height);
+                  }
+                  
+                  // Example for drawing text elements (if item is a div)
+                  if (item.tagName === 'DIV') {
+                      ctx.font = '20px Arial';
+                      ctx.fillStyle = 'white';
+                      ctx.fillText(item.innerText, x, y);
+                  }
+              }
+          }
+      
+          // Draw A-Frame scene
+          const aframeCanvas = aframeScene.components.screenshot.getCanvas('perspective');
+          ctx.drawImage(aframeCanvas, 0, 0, finalCanvas.width, finalCanvas.height);
+          
+          // Set the screenshot image source
+          screenshotImg.onload = function() {
+              // Show everything only after the image has loaded
+              screenshotContainer.style.display = 'flex';
+              screenshotImg.style.display = 'block';
+              closeBtn.style.display = 'block';
+              shareText.style.display = 'block';
+              button.style.display = 'block';
+          };
+          
+          screenshotImg.src = finalCanvas.toDataURL('image/png');
+        }
+      
+        function closeScreenshot() {
+          const screenshotContainer = document.getElementById('screenshot-container');
+          screenshotContainer.style.display = 'none';
+        }
+      </script>
+      
+      
+</body>
+</html>
